@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:200;300;400;500;600;700;800;900&display=swap');
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'popins', sans-serif;
+    list-style: none;
+}
+
+section {
+    position: relative;
+    background:#F0F8FF;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.5s;
+}
+section.dark{
+    background: #24292d;
+}
+section .card {
+    position: relative;
+    width: 300px;
+    height:380px;
+    background:#fff;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.025);
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section.dark .card{
+    background: #2d333a;
+}
+section .card .content,
+section .card .imgText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+section .card .imgText .imgBx {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    transition: 0.70s;
+}
+section.dark .card .imgText .imgBx{
+    border: #5f70832d 3px solid;
+    transition: 0.70s;
+}
+
+section .card .imgText .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+}
+
+section .card .imgText h3{
+    font-weight: 500;
+    font-size: 1.4em;
+    line-height: 1.2em;
+    text-align: center;
+    color: #2FA1FF;
+}
+
+section .card .imgText h3 span {
+    font-weight: 400;
+    color: #777;
+    font-size: 0.75em;
+}
+section.dark .card .imgText h3 span {
+    color: rgb(173, 173, 173);
+}
+
+section .card .sci {
+    display: flex;
+    margin-top: 15px;
+}
+
+section .card .sci li a{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: #e9F5FF;
+    color: #2FA1FF;
+    margin: 0 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 50%;
+    font-size: 20px;
+    transition: 0.5s;
+}
+section.dark .card .sci li a {
+    background: #404852;
+}
+section .card .sci li a:hover{
+    color: #fff;
+}
+section .card .sci li a .fa{
+    position: relative;
+    z-index: 1000;
+}
+section .card .sci li a:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #2fA1ff;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 0.5s;
+}
+section .card .sci li a:hover:before{
+    transform: scale(1);
+}
+.toggle{
+    position: absolute;
+    top: 20px;
+    right:20px;
+    background: rgb(240, 240, 240);
+    width:30px;
+    height:30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.5s;
+}
+section.dark .toggle {
+    background: #404852;
+}
+.toggle:before{
+content: '\f186';
+font-family: fontawesome;
+color: #2FA1FF;
+}
+section.dark .toggle:before{
+content: '\f185';
+font-family: fontawesome;
+color: #2FA1FF;
+}

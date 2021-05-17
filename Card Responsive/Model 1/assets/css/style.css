@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'roboto',sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1a4057;
+}
+.container {
+    position: relative;
+    width: 1100px;
+    background: #1a3a4e;
+    top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+.container .card {
+    position: relative;
+    max-width: 300px;
+    height: 181px;
+    background: #fff;
+    border-bottom: 5px solid #5d7fecc0;
+    margin: 30px 24px;
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    transition: 0.3s ease-in-out;
+    border-radius: 4px;
+}
+.container .card:hover{
+    height: 320px;
+    background: rgba(243, 243, 243, 0.966);
+    border-bottom: none;
+    transform: scale(1.05);
+}
+.container .card .imaAb {
+    position: relative;
+    max-width: 260px;
+    /* la hauteur de l'arriere plan de l'image sur hover*/
+    height: 172px;
+    top: -40px;
+    justify-content: center;
+    border-radius: 4px;
+    /* left: 6px; */
+    z-index: 1;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+.container .card .imaAb img {
+    max-width: 100%;
+    border-radius: 4px;
+}
+.container .card .content {
+    position: relative;
+    margin-top: -140px;
+    padding: 10px 15px;
+    text-align: center;
+    color: #111;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+.container .card:hover .content {
+    visibility: visible;
+    opacity: 1;
+    margin-top: -40px;
+    transition-delay: 0.3s;
+}
+h2:hover {
+    margin-bottom: 5px;
+    border-bottom: 4px solid rgb(105, 105, 250);
+    transition: 0.5s ease-in-out;
+}

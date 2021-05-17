@@ -7,9 +7,25 @@
     <link rel="shortcut icon" href="assets/images/heart.svg" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
-    <title>Responsive navbar2</title>
+    <title>Responsive text avec Clamp(CSS)</title>
 </head>
 <body>
+    <div>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus dolorum numquam vero esse quas officiis exercitationem magnam quibusdam quia asperiores harum aspernatur, quisquam, natus laudantium, rem neque impedit dolore laborum.
+        </p>
+    </div>
+    <style>
+        div {
+            align-items: center;
+            justify-content: center;
+            margin: 0 20px 0 20px;
+        }
+        div p {
+            font-size: clamp(1rem, 1.5vw, 5rem);
+            /* font-size: clamp(MAX, VAL, MIN); */
+        }
+    </style>
 
     <script src="/assets/app.js"></script>
 </body>

@@ -2,10 +2,59 @@
 *{
     padding: 0;
     margin: 0;
-    text-decoration: none;
-    list-style: none;
     box-sizing: border-box;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+    transition: 0.10s;
+
 }
 body{
     font-family: 'roboto',sans-serif;
+    list-style: none;
+}
+div{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div:nth-child(odd){
+    background:rgb(146, 146, 146);
+}
+div:before{
+    content: attr(data-text);
+    color: rgb(0, 2, 17);
+    font-size: 8em;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+ul{
+    width: 100%;
+    background: rgb(0, 0, 24);
+    height: 50px;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    letter-spacing: 0;
+    display: flex;
+    justify-content: space-around;
+}
+ul li a{
+    color: white;
+    line-height: 50px;
+    box-sizing: border-box;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+ul li a:hover{
+    border-bottom: solid 4px rgb(26, 171, 255);
+    padding-bottom: 3px;
+    transition: 0.5s ease-out;
+    color: rgb(211, 227, 241);
+}
+h3{
+    flex-wrap: wrap;
 }

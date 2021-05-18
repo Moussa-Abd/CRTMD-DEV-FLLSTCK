@@ -57,7 +57,13 @@ ul li a:hover{
 }
 /* Css pour javascript */
 
-ul li a.active{
+/* ul li a.active{
+    border-bottom: solid 4px rgb(26, 171, 255);
+    padding-bottom: 3px;
+} */
+
+/* Css pour Jquery */
+ul li.active a{
     border-bottom: solid 4px rgb(26, 171, 255);
     padding-bottom: 3px;
 }

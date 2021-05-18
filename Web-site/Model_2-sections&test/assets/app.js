@@ -1,3 +1,5 @@
+// JavaScript pour des pages URL
+
 const currentLocation = location.href;
 const menuItem = document.querySelectorAll('a');
 const menuLength = menuItem.length

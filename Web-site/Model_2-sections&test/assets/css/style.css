@@ -55,6 +55,9 @@ ul li a:hover{
     transition: 0.5s ease-out;
     color: rgb(211, 227, 241);
 }
-h3{
-    flex-wrap: wrap;
+/* Css pour javascript */
+
+ul li a.active{
+    border-bottom: solid 4px rgb(26, 171, 255);
+    padding-bottom: 3px;
 }

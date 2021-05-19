@@ -15,7 +15,7 @@ body{
     top: 0;
     width: 100%;
     height: 100vh;
-    animation: animate 30s ease-in-out infinite;
+    animation: animate 60s ease-in-out infinite;
     background-size: cover;
 }
 @keyframes animate{
@@ -55,5 +55,5 @@ body{
     padding-bottom: 5px;
 }
 .details h2 {
-    color: #fff;
+    color: rgb(122, 139, 138);
 }

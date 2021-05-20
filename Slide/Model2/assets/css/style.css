@@ -8,23 +8,24 @@ body{
     font-family: 'roboto',sans-serif;
 }
 #slider{
-    overflow: hidden;
+    overflow: hidde;
 }
 #slider figure{
-    position: relative;
+    position: absolute;
     width: 500%;
     margin: 0;
     left: 0;
     animation: animate 30s ease-in-out infinite;
+    background-size: cover;
 }
-#slider figure img{
-    width:20%;
-    float: left;
+#slider figure{
+    width:100%;
+    /* float: left; */
     object-fit: cover;
     height: 400px;
     border-left: 2px solid rgb(17, 13, 77);
 }
-@keyframes animate {
+/* @keyframes animate {
     0%{
         left: 0;
     }
@@ -39,5 +40,19 @@ body{
     }
     100%{
         left: -400%;
+    }
+} */
+@keyframes animate {
+    0%, 100%{
+        background-image: url(/Slide/Model2/assets/images/image1.jpg);
+    }
+    25%{
+        background-image: url(/Slide/Model2/assets/images/image2.jpg);
+    }
+    50%{
+        background-image: url(/Slide/Model2/assets/images/image3.jpg);
+    }
+    75%{
+        background-image: url(/Slide/Model2/assets/images/image4.jpg);
     }
 }

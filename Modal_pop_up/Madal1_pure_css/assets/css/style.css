@@ -67,7 +67,9 @@ h1{
     overflow: hidden;
     transition: 0.3s;
 }
-.container-modal #modal-toggle{
+.container-modal #modal-toggle,
+.container-modal #modal-toggle:checked~.modal-btn
+{
     display: none;
 }
 .modal-content{
@@ -79,7 +81,7 @@ h1{
     padding: 21px;
 }
 .container-modal .modal-close{
-    color: rgb(3, 3, 3);
+    color: rgb(153, 153, 153);
     width: 25px;
     height: 25px;
     padding: 3px;
@@ -101,9 +103,10 @@ h1{
     color: #fff;
     right: 30px;
     background: rgb(15, 153, 38);
-    padding: 10px;
-    border-radius: 2px;
-    font-size: 14px;font-weight: normal;
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: normal;
     border: 2px solid rgb(15, 153, 38);
     cursor: pointer;
 }

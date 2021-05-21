@@ -18,6 +18,7 @@ body{
 h1{
     color: rgb(30, 146, 30);
 }
+
 .container-modal .modal-btn{
     color: #ffff;
     background: rgb(23, 211, 23);
@@ -26,8 +27,11 @@ h1{
     border-radius: 3px;
     cursor: pointer;
     box-shadow: 0 0 1em rgba(143, 142, 142, 0.616);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.container-modal #modal-toggle:checked ~ .modal-background{
+.container-modal #modal-toggle:checked~.modal-background{
     background: rgba(0, 0, 0, 0.459);
     width: 100vw;
     height: 100vh;
@@ -37,10 +41,10 @@ h1{
     z-index: 9;
     visibility: visible;
     opacity: 1;
-    transition: 0.5s;
+    /* transform: 0.5s; */
 }
-.container-modal #modal-toggle:checked ~ .modal-content{
-    background: #fff;
+.container-modal #modal-toggle:checked~.modal-content{
+    background: #ffff;
     width: 600px;
     height: 350px;
     border-radius: 5px;
@@ -48,21 +52,19 @@ h1{
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    z-index: 99;
-    cursor: auto;
+    z-index: 999;
     visibility: visible;
     opacity: 1;
     box-shadow: 0 0 1em rgba(143, 142, 142, 0.616);
     text-align: center;
 }
-.container-modal .container-content,
+.container-modal .modal-content,
 .container-modal .modal-background{
     height: 0;
     width: 0;
     opacity: 0;
     visibility: hidden;
     overflow: hidden;
-    cursor: pointer;
     transition: 0.3s;
 }
 .container-modal #modal-toggle{
@@ -71,13 +73,13 @@ h1{
 .modal-content{
     position: relative;
 }
-.modal-content i{
-    color: greenyellow;
-    font-size: 90px;
+.modal-content span i{
+    color: rgb(15, 153, 38);
+    font-size: 50px;
     padding: 21px;
 }
 .container-modal .modal-close{
-    color: #fff;
+    color: rgb(3, 3, 3);
     width: 25px;
     height: 25px;
     padding: 3px;
@@ -89,19 +91,27 @@ h1{
     top: 5px;
     cursor: pointer;
 }
+.container-modal .modal-close:hover {
+    color: rgb(245, 102, 102);
+    transform: scale(1.1);
+}
 .container-modal .modal-content-btn{
     position: absolute;
     bottom: 20px;
+    color: #fff;
     right: 30px;
-    background: green;
+    background: rgb(15, 153, 38);
     padding: 10px;
     border-radius: 2px;
     font-size: 14px;font-weight: normal;
-    border: 2px solid green;
+    border: 2px solid rgb(15, 153, 38);
     cursor: pointer;
 }
 .modal-content .modal-content-btn:hover{
-    color: green;
+    color: rgb(15, 153, 38);
     background: #fff;
     transition: 0.4s;
+}
+h2{
+    padding: 6px;
 }

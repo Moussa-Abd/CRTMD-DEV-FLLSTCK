@@ -9,3 +9,8 @@
 body{
     font-family: 'roboto',sans-serif;
 }
+.got{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

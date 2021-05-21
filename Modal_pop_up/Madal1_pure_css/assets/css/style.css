@@ -41,7 +41,7 @@ h1{
     z-index: 9;
     visibility: visible;
     opacity: 1;
-    /* transform: 0.5s; */
+    transition: 0s;
 }
 .container-modal #modal-toggle:checked~.modal-content{
     background: #ffff;
@@ -57,6 +57,8 @@ h1{
     opacity: 1;
     box-shadow: 0 0 1em rgba(143, 142, 142, 0.616);
     text-align: center;
+    
+    transition: 0s;
 }
 .container-modal .modal-content,
 .container-modal .modal-background{
@@ -78,10 +80,10 @@ h1{
 .modal-content span i{
     color: rgb(15, 153, 38);
     font-size: 50px;
-    padding: 21px;
+    padding: 20px 0 0 0;
 }
 .container-modal .modal-close{
-    color: rgb(153, 153, 153);
+    color: rgb(245, 245, 245);
     width: 25px;
     height: 25px;
     padding: 3px;
@@ -118,5 +120,10 @@ h1{
     transform: scale(1.1);
 }
 h2{
-    padding: 6px;
+    padding: 8px;
+    background: rgb(15, 153, 38);
+    color: #fff;
+}
+h3{
+    padding: 0.5rem;
 }

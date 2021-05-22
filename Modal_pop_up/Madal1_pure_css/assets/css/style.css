@@ -32,7 +32,8 @@ h1{
     justify-content: center;
 }
 .container-modal #modal-toggle:checked~.modal-background{
-    background: rgba(0, 0, 0, 0.459);
+    background: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(2px);
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -57,7 +58,6 @@ h1{
     opacity: 1;
     box-shadow: 0 0 1em rgba(143, 142, 142, 0.616);
     text-align: center;
-    
     transition: 0s;
 }
 .container-modal .modal-content,

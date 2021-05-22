@@ -58,7 +58,7 @@ h1{
     opacity: 1;
     box-shadow: 0 0 1em rgba(143, 142, 142, 0.616);
     text-align: center;
-    transition: 0s;
+    transition: 0.15s;
 }
 .container-modal .modal-content,
 .container-modal .modal-background{

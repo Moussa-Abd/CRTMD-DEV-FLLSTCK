@@ -10,22 +10,28 @@
     <title>Modal PopUp css and js</title>
 </head>
 <body>
-    <a href="#" class="btn">S'inscrire</a>
+    <a href="#" class="btn" onclick="popupToggle();">S'inscrire</a>
+    
     <div id="popup">
         <div class="content">
             <img src="assets/images/email.svg" alt="">
             <h2>Envoyé vos emails</h2>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea ipsam odit non quod, soluta amet beatae necessitatibus ullam deleniti aliquid consectetur eos harum laborum exercitationem </p>
             <div class="inputBox">
-                <input type="email" placeholder="Ton Email">
+                <input type="email" placeholder="Ton e-mail">
             </div>
             <div class="inputBox">
                 <input type="submit" value="S'inscrire">
-                
             </div>
         </div>
-        <a href="" class="close">&times;</a>
+        <a href="" class="close" onclick="popupToggle();">X</a>
     </div>
+    <script>
+        function popupToggle() {
+            let popup = document.getElementById('popup');
+            popup.classList.toggle('active')
+        }
+    </script>
 
     <script src="/assets/app.js"></script>
 </body>

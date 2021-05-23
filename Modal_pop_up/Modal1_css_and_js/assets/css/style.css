@@ -37,13 +37,27 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 999;
+    z-index: 4;
     background: #fff;
     width: 450px;
     padding: 80px 50px 50px;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
     transition: 0.5s;
     visibility: hidden;
+    border-radius: 5px;
+}
+#blur{
+    position: absolute;
+    background: rgba(99, 222, 253, 0.342);
+    filter: blur(5px);
+    z-index: 3;
+    width: 100vw;
+    height: 100vh;
+    visibility: hidden;
+}
+#popup.active, #blur.active{
+    visibility: visible;
+    top: 50%;
 }
 #popup .content{
     position: relative;
@@ -92,7 +106,11 @@ body{
 }
 .close{
     position: absolute;
-    top: 30px;
-    right: 30px;
-    transform: scale(1.1);
+    top: 20px;
+    right: 20px;
+
+}
+.close:hover{
+    font-size: 18px;
+    color: rgb(214, 52, 52);
 }

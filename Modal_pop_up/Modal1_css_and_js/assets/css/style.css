@@ -8,4 +8,28 @@
 }
 body{
     font-family: 'roboto',sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgb(225, 225, 255);
 }
+.btn{
+    position: relative;
+    background: white;
+    padding: 15px 20px;
+    font-size: 18px;
+    display: inline-block;
+    color: rgb(9, 183, 236);
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.5s;
+    border-radius: 5px;
+}
+.btn:hover{
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 0.5rem rgba(134, 134, 134, 0.5));
+}
+

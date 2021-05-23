@@ -32,4 +32,67 @@ body{
     transform: scale(1.05);
     filter: drop-shadow(0 0 0.5rem rgba(134, 134, 134, 0.5));
 }
-
+#popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    background: #fff;
+    width: 450px;
+    padding: 80px 50px 50px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+    transition: 0.5s;
+    visibility: hidden;
+}
+#popup .content{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#popup .content img{
+    max-width: 80px;
+}
+#popup .content h2{
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin: 20px 0 10px;
+}
+#popup .content p{
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+}
+#popup .content .inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#popup .content .inputBox input{
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    outline: none;
+    font-size: 18px;
+}
+#popup .content .inputBox input[type="submit"]{
+    max-width: 150px;
+    background-color: rgb(0, 204, 255);
+    color: #fff;
+    border: none;
+    /* filter: drop-shadow(0 0 0 0.2em rgba(0, 0, 0, 0.5)); */
+    cursor: pointer;
+}
+.close{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    transform: scale(1.1);
+}

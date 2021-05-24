@@ -45,6 +45,13 @@
              themeSwitch.classList.toggle('active');
              body.classList.toggle('dark');
          }
+         let menu = document.querySelector('.toggle');
+         let navigation = document.querySelector('.navigation');
+         menu.onclick = function() {
+            menu.classList.toggle('active');
+            navigation.classList.toggle('active');
+         }
+
     </script>
 
     <script src="/assets/app.js"></script>

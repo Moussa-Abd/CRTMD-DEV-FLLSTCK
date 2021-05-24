@@ -122,11 +122,11 @@ header ul li a{
 }
 .content .imgBox::before {
     content: '';
-    color: var(--green);
+    position: absolute;
+    background: var(--green);
     border-radius: 50%;
-    position: relative;
-    height: 350px;
-    width: 350px;
+    height: 380px;
+    width: 380px;
 }
 .content .imgBox img{
     position: relative;
@@ -218,16 +218,49 @@ transform: translateY(-7px);
     .navigation{
         display: none;
     }
+    .navigation.active{
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        background: var(--white);
+        flex-direction: column;
+    }
+    header ul li {
+        margin-left: 0;
+        margin: 10px;
+    }
+    header ul li a {
+        font-size: 1.5em;
+        font-weight: 300;
+    }
     .toggle{
         position: relative;
         width: 30px;
         height: 30px;
-        background: url("/Web-site/Model\ 1/");
+        background: url("/Web-site/Model1/assets/images/menu.png");
         filter: invert(1);
         background-size: 30px;
         background-repeat: no-repeat;
         background-position:center;
         cursor: pointer;
         z-index: 1000;
+        transition: 0.3s ease-in-out;
+    }
+    .toggle.active{
+        background: url("/Web-site/Model1/assets/images/close.png");
+        filter: invert(1);
+        background-size: 25px;
+        background-repeat: no-repeat;
+        background-position:center;
+        cursor: pointer;
+        z-index: 1000;
+    }
+    .dark .toggle{
+        filter: invert(0);
     }
 }

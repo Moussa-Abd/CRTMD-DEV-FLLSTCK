@@ -10,6 +10,42 @@
     <title>Web-site_Dark-mode</title>
 </head>
 <body>
+    <div id="section">
+        <header>
+            <a href="#"><img src="assets/images/logo.png" width="100" class="logo" alt=""></a>
+            <div class="toggle"></div>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">What's News</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><span class="themeSwitch"></span></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>It's not just coffee <br>It's <span>Starbucks</span></h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus debitis quidem amet? Repudiandae sint natus vel animi, cupiditate ratione temporibus nulla autem harum repellat provident repellendus tempora deleniti nihil expedita!</p>
+                <a href="#">learn more</a>
+            </div>
+            <div class="imgBox">
+                <img src="assets/images/goblet.png" alt="">
+            </div>
+        </div>
+        <ul class="rs">
+            <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+        </ul>
+    </div>
+    <script>
+         let themeSwitch = document.querySelector('.themeSwitch');
+         let body = document.querySelector('body');
+         themeSwitch.onclick = function() {
+             themeSwitch.classList.toggle('active');
+             body.classList.toggle('dark');
+         }
+    </script>
 
     <script src="/assets/app.js"></script>
 </body>

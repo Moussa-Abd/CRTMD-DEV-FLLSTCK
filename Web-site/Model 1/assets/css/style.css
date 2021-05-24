@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 *{
     padding: 0;
     margin: 0;
@@ -6,6 +6,228 @@
     list-style: none;
     box-sizing: border-box;
 }
+:root{
+    --black: #333;
+    --green: #017143;
+    --white: rgb(238, 238, 238);
+    --black2: #333;
+    --white2: #fff;
+    --green2: #017143;
+}
+.dark{
+    --black: rgb(247, 247, 247);
+    --white: #113828;
+    --black2: #124e36;
+    --green2: #00ff9b;
+}
 body{
     font-family: 'roboto',sans-serif;
+    overflow: auto;
+}
+#section{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: var(--white);
+
+}
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+header .logo {
+    position: relative;
+    max-width: 70px;
+    filter: invert(10%);
+}
+header ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header ul li {
+    display: flex;
+    margin: 30px;
+}
+header ul li a{
+    display: inline-block;
+    color: var(--black);
+    font-weight: 500;
+}
+.content{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 3;
+}
+.content .textBox{
+    max-width: 600px;
+    z-index: 1;
+    margin-right: 20px;
+    max-width: 600px;
+    z-index: 2;
+}
+.content .textBox h2{
+    font-size: 3em;
+    color: var(--black);
+    line-height: 1.4em;
+    font-weight: 700;
+    margin: 10px;
+}
+/* .dark.content .textBox h2 span{
+    color: #00ff9b;
+} */
+.content .textBox p{
+    color: var(--black);
+}
+.content .textBox h2 span{
+    font-size: 1.2em;
+    color: var(--green2);
+}
+.content .textBox a{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 20px;
+    background: var(--green);
+    color: var(--white2);
+    border-radius: 40px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: 0.5s;
+   
+}
+.content .textBox a:hover {
+    transform: scale(1.05);
+}
+.content .imgBox {
+    position: relative;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content .imgBox::before {
+    content: '';
+    color: var(--green);
+    border-radius: 50%;
+    position: relative;
+    height: 350px;
+    width: 350px;
+}
+.content .imgBox img{
+    position: relative;
+    z-index: 1;
+    max-width: 350px;
+}
+.rs{
+    position: absolute;
+    bottom: 40px;
+    left: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rs li a{
+    display: inline-block;
+    margin-left: 15px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--black2);
+    color: var(--white2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+    transition: 0.7s;
+}
+.rs li a .fa{
+    font-size: 1.2em;
+}
+.rs li a:hover{
+background: var(--green);
+transform: translateY(-7px);
+}
+.themeSwitch{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background: var(--black2);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.themeSwitch::before{
+    content: '\f186';
+    font-family: fontAwesome;
+    color: var(--white);
+    font-size: 20px;
+}
+.themeSwitch.active::before{
+    content: '\f185';
+}
+
+/* resposive */
+@media (max-width: 900px) {
+    body {
+        overflow: auto;
+    }
+    #section {
+        padding: 150px 20px;
+    }
+    header{
+        padding: 20px;
+    }
+    .rs{
+        bottom: 20px;
+        left: 20px;
+    }
+    .content {
+        flex-direction: column-reverse;
+    }
+    .content .textBox,
+    .content .imgBox{
+        max-width: 100%;
+        margin-left: 0px;
+    }
+    .content .imgBox img {
+        max-width: 250px;
+    }
+    .content .imgBox::before{
+        clip-path: circle(125px at center);
+    }
+    .content .textBox h2{
+        font-size: 1.72em;
+    }
+    .navigation{
+        display: none;
+    }
+    .toggle{
+        position: relative;
+        width: 30px;
+        height: 30px;
+        background: url("/Web-site/Model\ 1/");
+        filter: invert(1);
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position:center;
+        cursor: pointer;
+        z-index: 1000;
+    }
 }

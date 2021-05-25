@@ -17,12 +17,16 @@ section{
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
+}
+section h2{
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #fff;
-    font-weight: 9;
+    font-weight: 900;
+    font-size: 60px;
+
 }
 .container{
     max-width: 1170px;
@@ -37,6 +41,7 @@ section{
 header{
     background-color: var(--color1);
     padding: 12px 0;
+    position: relative;
 }
 header .logo a{
     font-size: 30px;
@@ -62,4 +67,93 @@ header nav ul li a{
 header nav ul li a:hover,
 header nav ul li a.active{
     color: #fff;
+}
+label{
+    height: 34px;
+    width: 44px;
+    background-color: transparent;
+    border-radius: 10%;
+    border: 1px solid #fff;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+label span{
+    display: block;
+    height: 2px;
+    width: 20px;
+    background: #fff;
+    position: relative;
+    transition: 0.4s;
+}
+label span::after,
+label span::before{
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: #fff;
+    left: 0;
+    transition: 0.5s;
+}
+label span::after{
+    top: -6px;
+}
+label span::before{
+    top: 6px;
+}
+input#nav-check{
+    display: none;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 768px){
+    label{
+        display: flex;
+    }
+    header nav{
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 100%;
+        max-height: 0vh;
+        background-color: #673ab7;
+        border-top: 1px solid rgba(225, 225, 225, 0.2);
+        border-radius: 0 0 4px 4px;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.5s max-height 0.1s;
+        
+    }
+    header nav ul li a{
+        font-weight: 500;
+        font-size: 20px;
+    }
+    header nav ul li{
+        display: block;
+        margin: 0;
+    }
+    header #nav-check:checked ~ nav{
+        opacity: 1;
+        visibility: visible;
+        max-height: 100vh;
+    }
+    header #nav-check:checked ~ label span{
+        background: transparent;
+    }
+    header #nav-check:checked ~ label span::before{
+        top: 0;
+        transform: rotate(45deg);
+    }
+    header #nav-check:checked ~ label span::after{
+        top: 0;
+        transform: rotate(-45deg);
+    }
+
+
+
+    
 }

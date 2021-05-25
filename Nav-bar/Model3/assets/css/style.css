@@ -129,6 +129,8 @@ input#nav-check{
         
     }
     header nav ul li a{
+        display: flex;
+        justify-content: center;
         font-weight: 500;
         font-size: 20px;
     }
@@ -136,6 +138,14 @@ input#nav-check{
         display: block;
         margin: 0;
     }
+    ul li:last-child {
+        margin-bottom: 10px;
+    }
+    /* header nav ul{
+        margin: 20px;
+        justify-content:center;
+        align-items:center;
+    } */
     header #nav-check:checked ~ nav{
         opacity: 1;
         visibility: visible;
@@ -151,6 +161,9 @@ input#nav-check{
     header #nav-check:checked ~ label span::after{
         top: 0;
         transform: rotate(-45deg);
+    }
+    section h2{
+        font-size: 3rem;
     }
 
 

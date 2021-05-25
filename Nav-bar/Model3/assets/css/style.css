@@ -150,6 +150,7 @@ input#nav-check{
         justify-content: center;
         font-weight: 500;
         font-size: 20px;
+        letter-spacing: 1.5px;
     }
     header nav ul li{
         display: block;

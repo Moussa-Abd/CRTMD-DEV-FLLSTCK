@@ -158,11 +158,6 @@ input#nav-check{
     ul li:last-child {
         margin-bottom: 10px;
     }
-    /* header nav ul{
-        margin: 20px;
-        justify-content:center;
-        align-items:center;
-    } */
     header #nav-check:checked ~ nav{
         opacity: 1;
         visibility: visible;

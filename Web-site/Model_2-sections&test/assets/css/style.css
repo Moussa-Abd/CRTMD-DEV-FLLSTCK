@@ -60,7 +60,7 @@ ul li::before{
     bottom: 9px;
     position: absolute;
     transform: scaleX(0);
-    transform-origin: left;
+    transform-origin: left; /* left or right*/
     transition: transform .5s linear;
 
 }

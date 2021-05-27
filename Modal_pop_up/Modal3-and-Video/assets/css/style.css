@@ -11,3 +11,40 @@
 body {
     font-family: 'roboto', sans-serif;
 }
+.banner{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner .content{
+    max-width: 550px;
+}
+.banner .content img{
+    max-width: 100%;
+    margin-bottom: 15px;
+}
+.banner .content h2{
+    color: #fff;
+    font-weight: 500;
+    font-size: 2rem;
+}
+.banner .content p{
+    font-size: 1.2rem;
+    color: #fff;
+    font-weight: 300;
+    margin: 15px 0 25px;
+}
+.banner .content a{
+    position: relative;
+    text-transform: uppercase;
+    background: #fff;
+    color: #111;
+    font-weight: 500;
+    letter-spacing: 2px;
+    display: inline-block;
+    padding: 10px 15px;
+}

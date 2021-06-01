@@ -45,8 +45,10 @@ section h1{
 	text-align: right;
 }
 .timeline-item:nth-child(odd) .timeline-date{
-    /* padding-right: calc(50% + 30px); */
 	text-align: right;
+    left: calc(75% - 0px);
+    top: 0px;
+    position: relative;
 }
 .timeline-item:nth-child(even){
     padding-left: calc(50% + 30px);
@@ -74,14 +76,18 @@ section h1{
 .timeline-date p{
 	text-align: center;
 }
+
 .timeline-content{
     background-color: #002955;
 	padding: 15px 20px 30px;
-	border-radius: 10px;
+	border-radius: 0px 10px 10px;
+}
+.timeline-item:nth-child(odd) .timeline-content{
+    border-radius: 10px 0px 10px 10px;
 }
 .timeline-content h3{
     font-size: 20px;
-	color: #ffffff;
+	color: #fff;
 	margin: 0 0 10px;
 	text-transform: capitalize;
 	font-weight: 500;
@@ -95,7 +101,7 @@ section h1{
 
 /* RESPONSIVE */
 
-@media(max-width: 767px){
+@media(max-width: 769px){
 
 	.timeline-items::before{
 		left: 7px;
@@ -117,4 +123,12 @@ section h1{
     .timeline-content{
         border-radius: 0px 10px 10px;
     }
+    .timeline-item:nth-child(odd) .timeline-content{
+        border-radius: 0px 10px 10px 10px;
+    }
+    .timeline-item:nth-child(odd) .timeline-date{
+        left: 0;
+        position: relative;
+    }
+    /* la reposivité et le timedate à faire */
 }

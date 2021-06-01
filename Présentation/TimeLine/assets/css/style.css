@@ -130,5 +130,19 @@ section h1{
         left: 0;
         position: relative;
     }
-    /* la reposivité et le timedate à faire */
+
+    /* il reste la reposivité  */
+}
+@media(max-width: 600px){
+    .timeline-date{
+		width: 30%;
+	}
+}
+@media(max-width: 400px){
+    .timeline-date{
+		width: 40%;
+	}
+    section h1{
+        font-size: 24px;
+    }
 }

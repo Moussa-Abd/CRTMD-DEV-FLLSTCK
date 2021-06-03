@@ -15,7 +15,7 @@ body {
     position: relative;
     width: 100%;
     min-height: 100vh;
-    background: url("/Modal_pop_up/Modal3-and-Video/assets/images/pexels.jpg");
+    background: rgba(192, 192, 192, 0.8);
     background-size: cover;
     display: flex;
     justify-content: center;

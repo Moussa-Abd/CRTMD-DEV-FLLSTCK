@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'roboto',sans-serif;
+}
+div.cover{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(/Web-site/Model4_Sections/assets/images/pexels.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: rgba(209, 209, 209, 0.63);
+    display: flex;
+    align-items: center;
+    
+}
+section .content{
+    position: sticky;
+    top: 0;
+    height: auto;
+    justify-content: center;
+    text-align: center;
+}
+section.bg1{
+    background: #b2dA;
+}
+section.bg2{
+    background: #AEAE;
+}

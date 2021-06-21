@@ -85,8 +85,9 @@ section{
     color: #fff;
     letter-spacing: 1px;
     font-size: 13px;
-    text-align: center;
+    text-align: justify;
     margin: 20px 0 15px;
+    padding: 0 10px 0;
     line-height: 1.1em;
     transition: 0.9s;
     opacity: 0;

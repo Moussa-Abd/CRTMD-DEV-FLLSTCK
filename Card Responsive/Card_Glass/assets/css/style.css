@@ -9,9 +9,6 @@
 body{
     font-family: 'roboto',sans-serif;
 }
-h1{
-    display: none;
-}
 section{
     display: flex;
     justify-content: center;

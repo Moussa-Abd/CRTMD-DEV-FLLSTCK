@@ -33,6 +33,7 @@ header{
     width: 100%;
     position: fixed;
     backdrop-filter: blur(2px);
+    z-index: 1;
     transition: .5s;
 }
 header .logo a{
@@ -59,7 +60,7 @@ header nav ul li a{
     display: block;
     font-size: 16px;
     padding: 10px 0;
-    color: rgba(225, 225, 225, 0.7);
+    color: rgba(255, 255, 255, 0.863);
     text-transform: capitalize;
     transition: all 0.5s ease;
 }
@@ -121,9 +122,102 @@ input#nav-check{
     display: none;
 }
 
-/* Sections */
+/* Section card */
 
 section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #e0f7fa;
+}
+.container#cn{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 40px 0;
+}
+.container .card {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0,0.4);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+.container .card:hover{
+    transform: scale(1.02);
+}
+.container .card img{
+    width: 100%;
+}
+.container .card .content{
+    position: absolute;
+    bottom: -140px;
+    width: 100%;
+    height: 165px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    flex-direction: column;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 -10px 10px rgba(0,0,0,0.1);
+    border: 0.5px solid rgba(255,255,255,0.2);
+    transition: bottom 0.5s;
+}
+.container .card:hover .content{
+    bottom: 0;
+}
+.container .card .content .contentObj h3{
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+    margin: 20px 0 15px;
+    line-height: 1.1em;
+    transition: 0.9s;
+    opacity: 0;
+    transform: translateX(-100px);
+}
+.container .card:hover .content .contentObj h3{
+    opacity: 1;
+    transform: translateX(0px);
+}
+.container .card .content .contentObj p{
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: 13px;
+    text-align: justify;
+    margin: 20px 0 15px;
+    padding: 0 10px 0;
+    line-height: 1.1em;
+    transition: 0.9s;
+    opacity: 0;
+    transform: translateY(100px);
+}
+.container .card:hover .content .contentObj p{
+    opacity: 1;
+    transform: translateY(0px);
+}
+.container .card .content .contentObj h3 span{
+    font-size: 14px;
+    font-weight: 300;
+    text-transform: initial;
+}
+
+/* Sections */
+
+section.secImg {
     background: url('/Nav-bar/Model3/assets/images/pexels.jpg');
     background-size: cover;
     background-repeat: no-repeat;

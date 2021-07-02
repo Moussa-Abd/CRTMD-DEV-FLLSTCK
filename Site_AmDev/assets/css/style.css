@@ -8,7 +8,7 @@
     box-sizing: border-box;
 }
 :root{
-    --color1: rgba(13, 146, 255, 0.781);
+    --color1: rgba(43, 43, 43, 0.089);
 }
 body{
     font-family: 'roboto',sans-serif;
@@ -30,7 +30,10 @@ body{
 header{
     background-color: var(--color1);
     padding: 12px 0;
-    position: relative;
+    height: 65px;
+    width: 100%;
+    position: fixed;
+    transition: .5s;
 }
 header .logo a{
     font-family: 'pattaya', 'sans-serif;';
@@ -42,7 +45,11 @@ header nav ul li{
     display: inline-block;
     margin-left: 40px;
     position: relative;
+
 }
+/* header nav ul li:last-child{
+    display: flex;
+} */
 header .logo , 
 header nav{
     padding: 0 15px;
@@ -158,10 +165,12 @@ section h2{
         font-weight: 500;
         font-size: 20px;
         letter-spacing: 1.5px;
+        transition: .4s;
     }
     header nav ul li{
         display: block;
         margin: 0;
+        transition: 0.5s;
     }
     ul li:last-child {
         margin-bottom: 10px;

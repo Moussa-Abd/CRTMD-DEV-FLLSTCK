@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+:root{
+    --color1: rgba(13, 146, 255, 0.781);
+}
+body{
+    font-family: 'roboto',sans-serif;
+}
+
+/* Header and nav */
+
+.container{
+    max-width: 1170px;
+    margin: auto;
+    /* position: fixed; */
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+header{
+    background-color: var(--color1);
+    padding: 12px 0;
+    position: relative;
+}
+header .logo a{
+    font-family: 'pattaya', 'sans-serif;';
+    font-size: 30px;
+    color: #fff;
+    text-transform: capitalize;
+}
+header nav ul li{
+    display: inline-block;
+    margin-left: 40px;
+    position: relative;
+}
+header .logo , 
+header nav{
+    padding: 0 15px;
+}
+header nav ul li a{
+    display: block;
+    font-size: 16px;
+    padding: 10px 0;
+    color: rgba(225, 225, 225, 0.7);
+    text-transform: capitalize;
+    transition: all 0.5s ease;
+}
+header nav ul li::before{
+    content: '';
+    position: absolute;
+    background: #fff;
+    display: block;
+    bottom: -2px;
+    width: 0px;
+    height: 3px;
+    transition: all 0.32s ease-in-out 250ms;
+}
+header nav ul li:hover::before{
+    width: 57px;
+    opacity: 0.9;
+}
+header nav ul li a:hover,
+header nav ul li a.active{
+    color: #fff;
+}
+label{
+    height: 34px;
+    width: 44px;
+    background-color: transparent;
+    border-radius: 10%;
+    border: 1px solid #fff;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+label span{
+    display: block;
+    height: 2px;
+    width: 20px;
+    background: #fff;
+    position: relative;
+    transition: 0.4s;
+}
+label span::after,
+label span::before{
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: #fff;
+    left: 0;
+    transition: 0.5s;
+}
+label span::after{
+    top: -6px;
+}
+label span::before{
+    top: 6px;
+}
+input#nav-check{
+    display: none;
+}
+
+/* Sections */
+
+section{
+    background: url('/Nav-bar/Model3/assets/images/pexels.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+section h2{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 900;
+    font-size: 60px;
+
+}
+
+/* Responsive */
+
+@media screen and (max-width: 768px){
+    label{
+        display: flex;
+    }
+    header nav{
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 100%;
+        max-height: 0vh;
+        background-color: var(--color1);
+        border-top: 1px solid rgba(225, 225, 225, 0.2);
+        border-radius: 0 0 4px 4px;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.5s max-height 0.1s;
+        
+    }
+    header nav ul li a{
+        display: flex;
+        justify-content: center;
+        font-weight: 500;
+        font-size: 20px;
+        letter-spacing: 1.5px;
+    }
+    header nav ul li{
+        display: block;
+        margin: 0;
+    }
+    ul li:last-child {
+        margin-bottom: 10px;
+    }
+    header #nav-check:checked ~ nav{
+        opacity: 1;
+        visibility: visible;
+        max-height: 100vh;
+    }
+    header #nav-check:checked ~ label span{
+        background: transparent;
+    }
+    header #nav-check:checked ~ label span::before{
+        top: 0;
+        transform: rotate(45deg);
+    }
+    header #nav-check:checked ~ label span::after{
+        top: 0;
+        transform: rotate(-45deg);
+    }
+    header nav ul li:hover::before{
+        width: 0;
+        opacity: 0;
+    }
+    section h2{
+        font-size: 3rem;
+    }
+
+}

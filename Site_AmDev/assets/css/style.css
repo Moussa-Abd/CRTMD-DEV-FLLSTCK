@@ -19,7 +19,6 @@ body{
 .container{
     max-width: 1170px;
     margin: auto;
-    /* position: fixed; */
 }
 .row{
     display: flex;
@@ -30,15 +29,17 @@ body{
 header{
     background-color: var(--color1);
     padding: 12px 0;
-    height: 65px;
+    height: 60px;
     width: 100%;
     position: fixed;
+    backdrop-filter: blur(2px);
     transition: .5s;
 }
 header .logo a{
     font-family: 'pattaya', 'sans-serif;';
     font-size: 30px;
     color: #fff;
+    text-decoration: none;
     text-transform: capitalize;
 }
 header nav ul li{
@@ -136,7 +137,6 @@ section h2{
     color: #fff;
     font-weight: 900;
     font-size: 60px;
-
 }
 
 /* Responsive */

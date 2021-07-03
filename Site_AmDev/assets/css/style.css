@@ -30,6 +30,7 @@ html{
 
 body{
     font-family: 'roboto',sans-serif;
+    overflow-x: hidden;
 }
 .cache{
     display: none;
@@ -176,7 +177,7 @@ section.first .container .content h1{
     font-size: 30px;
     text-transform: uppercase;
     text-align: center;
-    padding: 30px;
+    padding: 10px;
 }
 section.first .container .content h2{
     font-family: 'roboto', sans-serif;
@@ -226,6 +227,150 @@ section.first .container .content a{
 section.first .container .content a:hover{
     background: rgb(0, 162, 255);
     transform: scale(1.03);
+}
+
+/* section timeline */
+
+.section.timeline-section h1{
+    position: absolute;
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+}
+.timeline-section{
+    position: relative;
+	background: #011c39;
+	min-height: 100vh;
+	padding: 30px 15px;
+}
+.timeline-items{
+	max-width: 100vw;
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+}
+.timeline-items::before{
+	content: '';
+	position: absolute;
+	width: 2px;
+	height: 85%;
+	background-color: #2f363e;
+	left: calc(50% - 1px);
+}
+.timeline-item{
+	margin-bottom: 40px;
+	width: 100%;
+	position: relative;
+}
+.timeline-item:last-child{
+	margin-bottom: 0;
+}
+.timeline-item:nth-child(odd){
+    padding-right: calc(50% + 30px);
+	text-align: right;
+}
+.timeline-item:nth-child(odd) .timeline-date{
+	text-align: right;
+    left: calc(75% - 0px);
+    top: 0px;
+    position: relative;
+}
+.timeline-item:nth-child(even){
+    padding-left: calc(50% + 30px);
+}
+.timeline-dot{
+	height: 16px;
+	width: 16px;
+	background-color: #002955;
+	border: 1.5px solid rgb(0, 113, 241);
+	position: absolute;
+	left: calc(50% - 8px);
+	border-radius: 50%;
+	top:10px;
+}
+.timeline-date{
+	font-size: 16px;
+	color: #ffffff;
+	background: #002955;
+	height: 25px;
+	width: 25%;
+	border-radius: 10px;
+	margin:6px 0 15px;
+	border: 1px solid rgb(0, 113, 241);
+}
+.timeline-date p{
+	text-align: center;
+}
+
+.timeline-content{
+    background-color: #002955;
+	padding: 15px 20px 30px;
+	border-radius: 0px 10px 10px;
+}
+.timeline-item:nth-child(odd) .timeline-content{
+    border-radius: 10px 0px 10px 10px;
+}
+.timeline-content h3{
+    font-size: 20px;
+	color: #fff;
+	margin: 0 0 10px;
+	text-transform: capitalize;
+	font-weight: 500;
+}
+.timeline-content p{
+    color: #e0e0e0;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 22px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 769px){
+
+	.timeline-items::before{
+		left: 7px;
+	}
+	.timeline-item:nth-child(odd){
+		padding-right: 0;
+		text-align: left;
+	}
+	.timeline-item:nth-child(odd),
+	.timeline-item:nth-child(even){
+		padding-left: 37px;
+	}
+	.timeline-dot{
+		left:0;
+	}
+	.timeline-date{
+		width: 18%;
+	}
+    .timeline-content{
+        border-radius: 0px 10px 10px;
+    }
+    .timeline-item:nth-child(odd) .timeline-content{
+        border-radius: 0px 10px 10px 10px;
+    }
+    .timeline-item:nth-child(odd) .timeline-date{
+        left: 0;
+        position: relative;
+    }
+
+    /* il reste la reposivité  */
+}
+@media(max-width: 600px){
+    .timeline-date{
+		width: 30%;
+	}
+}
+@media(max-width: 400px){
+    .timeline-date{
+		width: 40%;
+	}
+    .section.timeline h1{
+        font-size: 24px;
+    }
 }
 
 
@@ -343,12 +488,10 @@ section#container{
     z-index: 2;
 }
 section#container .section{
-    display: flex;
     position: sticky;
     top: 0;
     width: 100%;
     height: 100vh;
-    background: #ccc;
     background-size: cover;
 }
 section#container .section img{
@@ -493,12 +636,13 @@ a.arrowTop i.fas{
     top: 90%;
     left: 95%;
     font-size: 50px;
-    color: rgb(0, 160, 152);
-    border: 2px solid rgb(124, 124, 124);
+    color: rgb(0, 43, 160);
+    border: 2px solid rgb(142, 94, 255);
     border-radius: 50%;
     position: fixed;
     z-index: 99;
     display: none;
+    margin: 2px;
 }
 
 /* Responsive Header and Nav */

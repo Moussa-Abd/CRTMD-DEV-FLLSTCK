@@ -10,6 +10,9 @@
 :root{
     --color1: rgba(43, 43, 43, 0.089);
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     font-family: 'roboto',sans-serif;
 }
@@ -124,7 +127,7 @@ input#nav-check{
 
 /* Section card */
 
-section{
+section.first{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -218,22 +221,164 @@ section{
 /* Sections */
 
 section.secImg {
-    background: url('/Nav-bar/Model3/assets/images/pexels.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
+    background: #e0fae0;
 }
-section h2{
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
+.section h2{
+    position: absolute;
+    color: rgb(44, 44, 44);
     font-weight: 900;
     font-size: 60px;
+    transform: translateX(40%)
 }
 
-/* Responsive */
+section#container{
+    position: relative;
+    width: 100%;
+}
+section#container .section{
+    display: flex;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: #ccc;
+    background-size: cover;
+}
+section#container .section img{
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Footer */
+
+footer{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 40px 100px;
+    background: #111;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+footer .container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+footer .container .sec{
+    margin-right: 30px;
+}
+footer .container .sec.aboutus{
+    width: 40%;
+}
+footer .container h2{
+    position: relative;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+footer .container h2:before{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: rgb(255, 0, 98);
+}
+footer .sec.aboutus p{
+    color: #999;
+}
+.rs{
+    margin-top: 20px;
+    display: flex;
+}
+.rs li a{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 20px;
+    transition: 0.4s ease;
+}
+.rs li a:hover{
+    background: linear-gradient(135deg, rgb(255, 29, 85), rgb(52, 16, 255));
+}
+.quickLinks{
+    position: relative;
+    width: 25%;
+}
+.quickLinks ul li a{
+    color: #999;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.quickLinks ul li a:hover{
+    color: #fff;
+}
+footer .contact{
+    width: calc(35% - 60px);
+    margin-bottom: 0 !important;
+}
+.contact .info{
+    position: relative;
+}
+.contact .info li{
+    display:flex;
+    margin-bottom: 10px;
+    align-items: center;
+}
+.contact .info li span:nth-child(1){
+    color: #fff;
+    font-size: 20px;
+    margin-right: 10px;
+}
+.contact .info li span,
+.contact .info li a{
+    color: #999;
+}
+.contact .info li a:hover{
+    color: #fff;
+}
+.contact .info li i{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 20px;
+    transition: 0.5s ease;
+}
+.contact .info li i:hover{
+    background: rgb(1, 170, 156);
+}
+.copyrightText{
+    width: 100%;
+    background: #181818;
+    padding: 8px 100px;
+    text-align: center;
+    color: #999;
+}
+.copyrightText span{
+    color: rgb(0, 195, 255);
+}
+
+/* Responsive Header and Nav */
 
 @media screen and (max-width: 768px){
     label{
@@ -293,4 +438,26 @@ section h2{
         font-size: 3rem;
     }
 
+}
+
+/* Responsive footer */
+
+@media screen and (max-width: 991px){
+    footer {
+        padding: 40px;
+    }
+    footer .container {
+        flex-direction: column;
+    }
+    footer .container .sec {
+        margin-right: 0;
+        margin-bottom: 40px;
+    }
+    footer .container .sec.aboutus,
+    .quickLinks, .contact{
+        width: 100%;
+    }
+    .copyrightText{
+        padding: 8px 40px;
+    }
 }

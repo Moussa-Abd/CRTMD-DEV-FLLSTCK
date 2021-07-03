@@ -13,6 +13,16 @@
 html{
     scroll-behavior: smooth;
 }
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-track{
+    border: 7px solid rgba(6, 226, 255, 0.26);
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 3px;
+    background: linear-gradient(45deg, cyan, orange, yellow);
+}
 body{
     font-family: 'roboto',sans-serif;
 }

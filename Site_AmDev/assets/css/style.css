@@ -494,6 +494,10 @@ section#container .section{
     height: 100vh;
     background-size: cover;
 }
+section#container:nth-child(2){
+    width: 100%;
+    height: 50vh;
+}
 section#container .section img{
     object-fit: cover;
     width: 100%;
@@ -636,7 +640,7 @@ a.arrowTop i.fas{
     top: 90%;
     left: 95%;
     font-size: 50px;
-    color: rgb(0, 43, 160);
+    color: rgb(87, 165, 255);
     border: 2px solid rgb(142, 94, 255);
     border-radius: 50%;
     position: fixed;

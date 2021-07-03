@@ -13,6 +13,9 @@
 html{
     scroll-behavior: smooth;
 }
+
+/* ScrollBars */
+
 ::-webkit-scrollbar{
     width: 5px;
 }
@@ -21,10 +24,15 @@ html{
 }
 ::-webkit-scrollbar-thumb{
     border-radius: 3px;
+    border: solid 1px rgba(5, 190, 30, 0.925);
     background: linear-gradient(45deg, cyan, orange, yellow);
 }
+
 body{
     font-family: 'roboto',sans-serif;
+}
+.cache{
+    display: none;
 }
 
 /* Header and nav */
@@ -46,7 +54,8 @@ header{
     width: 100%;
     position: fixed;
     backdrop-filter: blur(2px);
-    z-index: 1;
+    z-index: 9;
+    border-bottom: solid 2px rgba(148, 148, 148, 0.363);
     transition: .5s;
 }
 header .logo a{
@@ -138,11 +147,13 @@ input#nav-check{
 /* Section card */
 
 section.first{
+    Position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     background: #e0f7fa;
+    z-index: 5;
 }
 .container#cn{
     position: relative;
@@ -244,6 +255,7 @@ section.secImg {
 section#container{
     position: relative;
     width: 100%;
+    z-index: 2;
 }
 section#container .section{
     display: flex;
@@ -263,7 +275,8 @@ section#container .section img{
 /* Footer */
 
 footer{
-    position: relative;
+    position: sticky;
+    bottom: 1px;
     width: 100%;
     height: auto;
     padding: 40px 100px;
@@ -378,11 +391,14 @@ footer .contact{
     background: rgb(1, 170, 156);
 }
 .copyrightText{
+    position: sticky;
+    bottom: 0.1px;
     width: 100%;
     background: #181818;
     padding: 8px 100px;
     text-align: center;
     color: #999;
+    z-index: -1;
 }
 .copyrightText span{
     color: rgb(0, 195, 255);
@@ -453,6 +469,9 @@ footer .contact{
 /* Responsive footer */
 
 @media screen and (max-width: 991px){
+    body {
+        overflow-x: hidden;
+    }
     footer {
         padding: 40px;
     }

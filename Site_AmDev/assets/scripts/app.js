@@ -7,6 +7,5 @@ window.addEventListener("scroll", function(){
     } else {
         header.style.top = "0";
     }
-    lastScrollTop = scrollTop;
-        
+    lastScrollTop = scrollTop;        
 })

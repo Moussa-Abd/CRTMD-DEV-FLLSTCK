@@ -1,3 +1,5 @@
+// Nav scrollTop
+
 let lastScrollTop = 0;
     header = document.querySelector(".header");
 window.addEventListener("scroll", function(){
@@ -10,6 +12,8 @@ window.addEventListener("scroll", function(){
     lastScrollTop = scrollTop;   
 })
 
+//ArrowTop
+
 let topBtn = document.querySelector(".fa-arrow-circle-up");
 window.onscroll = function(){
     scrollFunction()
@@ -21,3 +25,19 @@ function scrollFunction(){
         topBtn.style.display="none";
     }
 }
+
+// ModeDark
+
+let icon = document.querySelector(".icon");
+
+icon.onclick = function(){
+    document.body.classList.toggle("dark-theme");
+    if(document.body.classList.contains("dark-theme")){
+        icon.src="images/sun.png";
+    } else {
+        icon.src="images/moon.png";
+    }
+}
+
+//https://www.youtube.com/watch?v=9LZGB3OLXNQ
+

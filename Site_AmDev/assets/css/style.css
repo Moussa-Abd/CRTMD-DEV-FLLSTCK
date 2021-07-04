@@ -9,6 +9,11 @@
 }
 :root{
     --color1: rgba(175, 175, 175, 0.37);
+    --color2: rgb(20, 20, 20);
+}
+.dark-theme {
+    --color1: rgba(175, 175, 175, 0.37);
+    --color2: rgb(20, 20, 20);
 }
 html{
     scroll-behavior: smooth;

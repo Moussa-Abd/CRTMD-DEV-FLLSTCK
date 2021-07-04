@@ -153,24 +153,24 @@ section.first{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 6px;
+    padding: 25px;
     z-index: 5;
 }
-section.first .container{
-    width: 1080px;
-    height: 50%;
+
+section.first .content{
     position: relative;
-    display: flex;
-    /* border: 1px solid rgb(119, 119, 119); */
-}
-section.first .container .content{
-    position: relative;
-    width: 60%;
-    height: 100%;
     padding: 2px;
     /* border: 1px solid rgb(255, 69, 69); */
 }
-section.first .container .content h1{
+section.first .imagBt{
+    position: relative;
+    width: 100%;
+     /*donner une valeur en pixel */
+}
+section.first .imagBt img{
+    width: 100%;
+}
+section.first .content h1{
     color: rgb(73, 73, 73);
     font-family: 'roboto', sans-serif;
     font-weight: 900;
@@ -179,42 +179,31 @@ section.first .container .content h1{
     text-align: center;
     padding: 10px;
 }
-section.first .container .content h2{
+section.first .content h2{
     font-family: 'roboto', sans-serif;
     font-weight: 500;
     text-transform: uppercase;
     color: rgb(73, 73, 73);;
     padding-top: 30px;
     text-align: center;
+    padding-bottom: 20px;
 }
-section.first .container .content span{
+section.first .content span{
     color: rgb(0, 162, 255);
 }
-section.first .container .content P{
-    letter-spacing: 2px;
+section.first .content P{
+    letter-spacing: 1px;
     color: rgb(53, 53, 53);
-    padding-top: 27px;
+    top: 24px;
     font-size: 20px;
-    line-height: 1.5;
+    line-height: 1.5em;
     font-weight: 400;
-    transform: translateY(20%);
 }
-section.first .container .imagBt{
-    position: relative;
-    width: 40%;
-    height: 100%;
-    /* border: 1px solid rgb(21, 255, 0); */
-}
-section.first .container .imagBt img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-section.first .container .content a{
+section.first .content a{
     display: inline-block;
     position: relative;
     width: 100px;
-    margin-top: 4rem;
+    top: 2rem;
     height: auto;
     background: rgb(22, 170, 255);
     text-decoration: none;
@@ -224,7 +213,7 @@ section.first .container .content a{
     text-align: center;
     transition: .5s;
 }
-section.first .container .content a:hover{
+section.first .content a:hover{
     background: rgb(0, 162, 255);
     transform: scale(1.03);
 }
@@ -325,9 +314,9 @@ section.first .container .content a:hover{
 	line-height: 22px;
 }
 
-/* RESPONSIVE */
+/* RESPONSIVE time line and First section */
 
-@media(max-width: 769px){
+@media(max-width: 768px){
 
 	.timeline-items::before{
 		left: 7px;
@@ -357,7 +346,36 @@ section.first .container .content a:hover{
         position: relative;
     }
 
-    /* il reste la reposivité  */
+    /* First section  */
+
+    section.first{
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background: #acf5ff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap-reverse;
+        padding: 25px;
+        z-index: 5;
+    }
+    section.first .imagBt{
+        position: relative;
+        width: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+         /*donner une valeur en pixel */
+    }
+    section.first .imagBt img{
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
 }
 @media(max-width: 600px){
     .timeline-date{

@@ -374,6 +374,7 @@ section.first .content a:hover{
         height: 300px;
         object-fit: cover;
         border-radius: 50%;
+        filter: drop-shadow(0 0 0.70rem rgba(36, 36, 36, 0.363));
     }
 
 }

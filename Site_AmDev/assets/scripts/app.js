@@ -21,6 +21,7 @@ window.onscroll = function(){
 function scrollFunction(){
     if(document.body.scroll > 100 || document.documentElement.scrollTop > 100){
         topBtn.style.display= "block";
+        topBtn.style.transition= ".5s";
     } else {
         topBtn.style.display="none";
     }

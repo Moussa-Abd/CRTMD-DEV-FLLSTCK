@@ -149,12 +149,14 @@ label span::before{
 input#nav-check{
     display: none;
 }
-/* section presention */
+
+/* Section presention */
+
 section.first{
     position: relative;
     width: 100%;
     height: 100vh;
-    background: #acf5ff;
+    background: #f5f5f5;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -174,6 +176,7 @@ section.first .imagBt{
 }
 section.first .imagBt img{
     width: 100%;
+    border-radius: 10px;
 }
 section.first .content h1{
     color: rgb(73, 73, 73);
@@ -225,7 +228,7 @@ section.first .content a:hover{
 
 /* section timeline */
 
-.section.timeline-section h1{
+section .timeline-section h1{
     position: absolute;
     color: #fff;
     text-align: center;
@@ -357,7 +360,7 @@ section.first .content a:hover{
         position: relative;
         width: 100%;
         height: 100vh;
-        background: #acf5ff;
+        background: #f5f5f5;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -405,8 +408,8 @@ section.second{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: calc(100vh + 60px);
-    background: #e0f7fa;
+    min-height: 100vh;
+    background: #dadada;
     z-index: 5;
 }
 .container#cn{
@@ -493,39 +496,10 @@ section.second{
     text-transform: initial;
 }
 
-/* Sections */
+/* Section timeline */
 
-section.secImg {
-    background: #e0fae0;
-}
-.section h2{
-    position: absolute;
-    color: rgb(44, 44, 44);
-    font-weight: 900;
-    font-size: 60px;
-    transform: translateX(40%)
-}
-
-section#container{
-    position: relative;
-    width: 100%;
-    z-index: 2;
-}
-section#container .section{
-    position: sticky;
-    top: 0;
-    width: 100%;
-    height: 100vh;
-    background-size: cover;
-}
-section#container:nth-child(2){
-    width: 100%;
-    height: 50vh;
-}
-section#container .section img{
-    object-fit: cover;
-    width: 100%;
-    height: 100vh;
+section.timeline{
+    background: gray;
 }
 
 /* Footer */
@@ -536,7 +510,7 @@ footer{
     width: 100%;
     height: auto;
     padding: 40px 100px;
-    background: #111;
+    background: rgb(88, 88, 88);
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;

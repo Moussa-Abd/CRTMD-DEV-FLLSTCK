@@ -14,7 +14,7 @@ window.addEventListener("scroll", function(){
 
 //ArrowTop
 
-let topBtn = document.querySelector(".fa-arrow-circle-up");
+let topBtn = document.querySelector(".fa-chevron-up");
 window.onscroll = function(){
     scrollFunction()
 };

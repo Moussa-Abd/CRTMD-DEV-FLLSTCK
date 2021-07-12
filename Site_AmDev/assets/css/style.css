@@ -666,6 +666,13 @@ footer p{
 }
 
 /* ArrowTop */
+div.top{
+    position: absolute;
+    margin-right: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
 
 a.arrowTop i.fas{
     position: absolute;
@@ -679,7 +686,21 @@ a.arrowTop i.fas{
     position: fixed;
     z-index: 99;
     display: none;
-    margin: 2px;
+}
+@media (min-width: 740px){
+    a.arrowTop i.fas{
+        position: absolute;
+        top: 85%;
+        left: 86%;
+        font-size: 50px;
+        text-decoration: none;
+        color: rgb(67, 164, 255);
+        /* border: 2px solid  rgb(247, 27, 255); */
+        /* border-radius: 50%; */
+        position: fixed;
+        z-index: 99;
+        display: none;
+    }
 }
 
 /* Responsive Header and Nav */
@@ -737,6 +758,20 @@ a.arrowTop i.fas{
     header nav ul li:hover::before{
         width: 0;
         opacity: 0;
+    }
+
+    a.arrowTop i.fas{
+        position: absolute;
+        top: 85%;
+        left: 95%;
+        font-size: 30px;
+        text-decoration: none;
+        color: rgb(67, 164, 255);
+        /* border: 2px solid  rgb(247, 27, 255); */
+        /* border-radius: 50%; */
+        position: fixed;
+        z-index: 99;
+        display: none;
     }
 
 }

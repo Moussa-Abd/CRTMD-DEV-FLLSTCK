@@ -1,23 +1,112 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
-*{
+
+* {
     padding: 0;
     margin: 0;
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
 }
-body{
-    font-family: 'roboto',sans-serif;
+
+body {
+    font-family: 'roboto', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.card-col{
+
+.card-col {
     position: relative;
     height: 400px;
     width: 300px;
-    top: 200px;
+    top: 250px;
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
-    background: #f7f7f7
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    background: #ecf1ff;
+    transition: 0.3s;
+}
+.card-col:hover{
+    transform: scale(1.01)
+}
+
+.card-col .wrapper {
+    padding: 35px;
+}
+
+.card-col .wrapper .button {
+    height: 60px;
+    width: 60px;
+    margin: 18px;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-out;
+}
+
+.card-col .wrapper .button:hover {
+    width: 200px;
+}
+
+.card-col .wrapper .button .icon {
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    border-radius: 50px;
+    box-sizing: border-box;
+    line-height: 60px;
+    transition: all 0.3s ease-out;
+}
+
+.card-col .wrapper .button:nth-child(1):hover .icon {
+    background: #4267B2;
+}
+
+.card-col .wrapper .button:nth-child(2):hover .icon {
+    background: #1DA1F2;
+}
+
+.card-col .wrapper .button:nth-child(3):hover .icon {
+    background: linear-gradient(135deg , #515BD4, #8134AF ,#DD2A7B, #F58529, #FEDA77);
+}
+
+
+.card-col .wrapper .button:nth-child(4):hover .icon {
+    background: #ff0000;
+}
+
+.card-col .wrapper .button .icon i {
+    font-size: 25px;
+    line-height: 60px;
+    transition: all 0.3s ease-out;
+}
+
+.card-col .wrapper .button:hover .icon i {
+    color: #fff;
+}
+
+.card-col .wrapper .button span {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 60px;
+    margin-left: 10px;
+    transition: all 0.3s ease-out;
+}
+
+.card-col .wrapper .button:nth-child(1) span {
+    color: #4267B2;
+}
+
+.card-col .wrapper .button:nth-child(2) span {
+    color: #1DA1F2;
+}
+
+.card-col .wrapper .button:nth-child(3) span {
+    color: #E1306C;
+}
+
+.card-col .wrapper .button:nth-child(4) span {
+    color: #ff0000;
 }

@@ -408,8 +408,8 @@ section.contact .content .visitCard{
         padding: 25px;
     }
     section.first img{
-        height: 300px;
-        width: 300px;
+        height: 200px;
+        width: 200px;
         float: none;
         object-fit: cover;
         border-radius: 50%;
@@ -417,7 +417,7 @@ section.contact .content .visitCard{
     }
     section.first .content{
         position: relative;
-        /* width: 50%; */
+        width: 100%;
         display: block;
         margin: 10px;
         padding: 5px;

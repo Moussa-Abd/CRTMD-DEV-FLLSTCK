@@ -169,7 +169,6 @@ section.first .content{
     padding: 5px;
 }
 
-
 section.first img{
     object-fit: cover;
     width: 300px;
@@ -407,23 +406,21 @@ section.contact .content .visitCard{
         align-items: center;
         flex-wrap: wrap-reverse;
         padding: 25px;
-        z-index: 5;
     }
-    section.first .imagBt{
-        position: relative;
-        width: 300px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
-         /*donner une valeur en pixel */
-    }
-    section.first .imagBt img{
-        width: 100%;
+    section.first img{
         height: 300px;
+        width: 300px;
+        float: none;
         object-fit: cover;
         border-radius: 50%;
         filter: drop-shadow(0 0 0.70rem rgba(36, 36, 36, 0.363));
+    }
+    section.first .content{
+        position: relative;
+        /* width: 50%; */
+        display: block;
+        margin: 10px;
+        padding: 5px;
     }
 
 }
@@ -640,6 +637,7 @@ footer p{
 }
 .rs li:hover{
     background: linear-gradient(135deg, rgb(255, 29, 85), rgb(52, 16, 255));
+    transition: 0.4s ease-in-out;
 }
 .footer-bottom{
     position: relative;

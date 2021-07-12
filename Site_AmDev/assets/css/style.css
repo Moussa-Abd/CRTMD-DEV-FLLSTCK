@@ -227,22 +227,17 @@ section.first .content a:hover{
 }
 
 /* section timeline */
-
-section.timeline h1{
+section.timeline div.t{
+    position: relative;
+}
+section.timeline div h1{
     color: rgb(102, 102, 102);
     text-align: center;
     font-size: 30px;
     padding-top: 10px;
 }
-section.timeline hr{
-    margin: 5px 150px;
-    
-}
-.timeline-section{
+.timeline{
     position: relative;
-	background: #011c39;
-	min-height: 100vh;
-	padding: 30px 15px;
 }
 .timeline-items{
 	max-width: 100vw;
@@ -329,6 +324,43 @@ section.timeline hr{
 	font-size: 16px;
 	font-weight: 300;
 	line-height: 22px;
+}
+
+/* Section contact */
+
+section.contact {
+    width: 100%;
+    min-height: 50vh;
+    background: rgb(237 237 237);
+}
+section.contact h1{
+    text-align: center;
+    padding-top: 10px;
+    color: rgb(102, 102, 102);
+}
+/* section.contact h1::after{
+    content: '';
+    background: rgb(102, 102, 102);
+    height: 2px;
+    width: 100%;
+    left: 0;
+    font-weight: 400;
+    bottom: -3px;
+    position: absolute;
+} */
+section.contact .content{
+    width: 100%;
+    min-height: calc(50vh - 39px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section.contact .content .visitCard{
+    background: #fafafa;
+    min-width: 315px;
+    height: 180px;
+    border-radius: 7px;
+    box-shadow: 0 2px 12px rgba(175, 175, 175, 0.4);
 }
 
 /* RESPONSIVE time line and First section */

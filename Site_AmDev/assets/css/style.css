@@ -550,7 +550,7 @@ section.second div.h1 h1::before{
     text-transform: initial;
 }
 
-/* card-col */
+/* CARD-COL */
 
 #card-col {
     height: 400px;
@@ -601,27 +601,6 @@ section.second div.h1 h1::before{
     transition: all 0.3s ease-out;
 }
 
-#card-col .wrapper .button:nth-child(1) .icon {
-    background: linear-gradient(90deg, rgb(248, 81, 3), rgb(255, 112, 46)) ;
-    color: #bec2ce;
-}
-
-#card-col .wrapper .button:nth-child(2) .icon {
-    background: linear-gradient(90deg, rgb(5, 100, 253), rgb(55, 140, 252) );
-    color: #bec2ce;
-}
-
-#card-col .wrapper .button:nth-child(3) .icon {
-    background: rgb(252, 228, 14);
-    color: #000;
-}
-
-
-#card-col .wrapper .button:nth-child(4) .icon {
-    background: #6f00ff;
-    color: #bec2ce;
-}
-
 #card-col .wrapper .button .icon i {
     font-size: 25px;
     line-height: 60px;
@@ -638,6 +617,28 @@ section.second div.h1 h1::before{
     line-height: 60px;
     margin-left: 10px;
     transition: all 0.3s ease-out;
+}
+
+/* Muable */
+
+#card-col .wrapper .button:nth-child(1) .icon {
+    background: linear-gradient(90deg, rgb(248, 81, 3), rgb(255, 112, 46)) ;
+    color: #bec2ce;
+}
+
+#card-col .wrapper .button:nth-child(2) .icon {
+    background: linear-gradient(90deg, rgb(5, 100, 253), rgb(55, 140, 252) );
+    color: #bec2ce;
+}
+
+#card-col .wrapper .button:nth-child(3) .icon {
+    background: rgb(252, 228, 14);
+    color: #000;
+}
+
+#card-col .wrapper .button:nth-child(4) .icon {
+    background: #6f00ff;
+    color: #bec2ce;
 }
 
 #card-col .wrapper .button:nth-child(1) span {

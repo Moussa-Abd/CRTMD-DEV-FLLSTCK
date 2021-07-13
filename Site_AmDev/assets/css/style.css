@@ -156,7 +156,7 @@ section.first{
     position: relative;
     width: 100%;
     min-height: 100vh;
-    background: #f5f5f5;
+    background: linear-gradient(135deg, #f5f5f5, rgb(241, 250, 253)); 
     padding: 25px;
     display: flex;
     justify-content: center;
@@ -172,10 +172,9 @@ section.first .content{
 section.first img{
     object-fit: cover;
     width: 300px;
-    height: 400px;
+    height: 300px;
     float: right;
-    border-radius: 10px;
-
+    border-radius: 50%;
 }
 section.first h1{
     color: rgb(73, 73, 73);
@@ -405,7 +404,7 @@ section.contact .content .visitCard{
         justify-content: center;
         align-items: center;
         flex-wrap: wrap-reverse;
-        padding: 25px;
+        padding: 10px;
     }
     section.first img{
         height: 200px;
@@ -549,6 +548,118 @@ section.second div.h1 h1::before{
     font-size: 14px;
     font-weight: 300;
     text-transform: initial;
+}
+
+/* card-col */
+
+#card-col {
+    height: 400px;
+    width: 300px;
+    position:relative;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.096);
+    background: #ecf1ff;
+    transition: 0.5s;
+}
+#card-col:hover{
+    transform: scale(1.01);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.229);
+}
+
+#card-col .wrapper {
+    padding: 35px;
+}
+
+#card-col .wrapper .button {
+    height: 60px;
+    width: 60px;
+    margin: 18px;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-out;
+}
+
+#card-col .wrapper .button {
+    width: 200px;
+}
+#card-col .wrapper .button:hover {
+    transform: scale(1.2)
+}
+
+#card-col .wrapper .button .icon {
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    border-radius: 50px;
+    box-sizing: border-box;
+    line-height: 60px;
+    transition: all 0.3s ease-out;
+}
+
+#card-col .wrapper .button:nth-child(1) .icon {
+    background: linear-gradient(90deg, rgb(248, 81, 3), rgb(255, 112, 46)) ;
+    color: #bec2ce;
+}
+
+#card-col .wrapper .button:nth-child(2) .icon {
+    background: linear-gradient(90deg, rgb(5, 100, 253), rgb(55, 140, 252) );
+    color: #bec2ce;
+}
+
+#card-col .wrapper .button:nth-child(3) .icon {
+    background: rgb(252, 228, 14);
+    color: #000;
+}
+
+
+#card-col .wrapper .button:nth-child(4) .icon {
+    background: #6f00ff;
+    color: #bec2ce;
+}
+
+#card-col .wrapper .button .icon i {
+    font-size: 25px;
+    line-height: 60px;
+    transition: all 0.3s ease-out;
+}
+
+#card-col .wrapper .button:hover .icon i {
+    color: #fff;
+}
+
+#card-col .wrapper .button span {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 60px;
+    margin-left: 10px;
+    transition: all 0.3s ease-out;
+}
+
+#card-col .wrapper .button:nth-child(1) span {
+    color: rgb(248, 81, 3);
+}
+
+#card-col .wrapper .button:nth-child(2) span {
+    color: rgb(5, 100, 253);
+}
+
+#card-col .wrapper .button:nth-child(3) span {
+    color: rgb(36, 32, 1);
+}
+#card-col .wrapper .button:nth-child(3):hover i {
+    color: rgb(0, 0, 0) !important;
+}
+/* #card-col .wrapper .button:nth-child(3) i {
+    color: rgb(252, 228, 14) !important;
+} */
+
+#card-col .wrapper .button:nth-child(4) span {
+    color: #6f00ff;
 }
 
 /* Section timeline */

@@ -170,6 +170,7 @@ section.first .content{
 }
 
 section.first img{
+    position: relative;
     object-fit: cover;
     width: 300px;
     height: 300px;
@@ -211,17 +212,19 @@ section.first a{
     width: 100px;
     top: 1.5rem;
     height: auto;
-    background: rgb(22, 170, 255);
+    background: linear-gradient(90deg, rgb(2, 149, 235),rgb(40, 172, 248));
     text-decoration: none;
     color: rgb(255, 255, 255);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.129);
     border-radius: 5px;
     padding: 10px;
     text-align: center;
     transition: .5s;
 }
 section.first a:hover{
-    background: rgb(0, 162, 255);
+    background: linear-gradient(90deg, rgb(2, 149, 235),rgb(11, 166, 255));
     transform: scale(1.03);
+    transition: .5s;
 }
 
 /* section timeline */
@@ -453,6 +456,7 @@ section.second div.h1{
     color: rgb(102, 102, 102);
     text-align: center;
     font-size: 20px;
+    padding: 10px;
     margin: 0px 0;
 }
 section.second div.h1 h1::before{
@@ -468,7 +472,7 @@ section.second div.h1 h1::before{
 .container#cn{
     position: relative;
     display: flex;
-    min-height: 100vh;
+    min-height: 60vh;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;

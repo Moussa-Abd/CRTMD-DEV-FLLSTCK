@@ -339,16 +339,6 @@ section.contact h1{
     padding-top: 10px;
     color: rgb(102, 102, 102);
 }
-/* section.contact h1::after{
-    content: '';
-    background: rgb(102, 102, 102);
-    height: 2px;
-    width: 100%;
-    left: 0;
-    font-weight: 400;
-    bottom: -3px;
-    position: absolute;
-} */
 section.contact .content{
     width: 100%;
     min-height: calc(50vh - 39px);
@@ -792,31 +782,24 @@ div.top{
 
 a.arrowTop i.fas{
     position: absolute;
-    top: 85%;
-    left: 95%;
+    bottom: 40px;
+    right: 40px;
     font-size: 50px;
     text-decoration: none;
-    color: rgb(67, 164, 255);
-    /* border: 2px solid  rgb(247, 27, 255); */
-    /* border-radius: 50%; */
+    color: rgb(1, 132, 255);
+    border-radius: 50%;
     position: fixed;
     z-index: 99;
     display: none;
 }
-@media (min-width: 740px){
-    a.arrowTop i.fas{
-        position: absolute;
-        top: 85%;
-        left: 86%;
-        font-size: 50px;
-        text-decoration: none;
-        color: rgb(67, 164, 255);
-        /* border: 2px solid  rgb(247, 27, 255); */
-        /* border-radius: 50%; */
-        position: fixed;
-        z-index: 99;
-        display: none;
+@media (min-width: 740px) {
+
+    a.arrowTop i.fas {
+        bottom: 30px;
+        right: 15px;
+        font-size: 40px;
     }
+
 }
 
 /* Responsive Header and Nav */
@@ -825,13 +808,16 @@ a.arrowTop i.fas{
     label{
         display: flex;
     }
+    header{
+        background-color: rgba(41, 52, 63, 0.938);
+    }
     header nav{
         position: absolute;
         left: 0;
         top: 100%;
         width: 100%;
         max-height: 0vh;
-        background-color: var(--color1);
+        background-color: rgba(41, 52, 63, 0.74);
         border-top: 1px solid rgba(225, 225, 225, 0.2);
         border-radius: 0 0 4px 4px;
         opacity: 0;
@@ -843,14 +829,16 @@ a.arrowTop i.fas{
         display: flex;
         justify-content: center;
         font-weight: 500;
-        font-size: 20px;
+        font-size: 48px;
         letter-spacing: 1.5px;
-        transition: .4s;
+        transition: 0.5s color 0.4s;
+        color: #ffff;
     }
     header nav ul li{
         display: block;
         margin: 0;
         transition: 0.5s;
+        padding: 24px 0;
     }
     ul li:last-child {
         margin-bottom: 0px;
@@ -859,6 +847,8 @@ a.arrowTop i.fas{
         opacity: 1;
         visibility: visible;
         max-height: 100vh;
+        background-color: rgba(41, 52, 63, 0.980);
+        overflow-y: hidden;
     }
     header #nav-check:checked ~ label span{
         background: transparent;
@@ -874,20 +864,6 @@ a.arrowTop i.fas{
     header nav ul li:hover::before{
         width: 0;
         opacity: 0;
-    }
-
-    a.arrowTop i.fas{
-        position: absolute;
-        top: 85%;
-        left: 95%;
-        font-size: 30px;
-        text-decoration: none;
-        color: rgb(67, 164, 255);
-        /* border: 2px solid  rgb(247, 27, 255); */
-        /* border-radius: 50%; */
-        position: fixed;
-        z-index: 99;
-        display: none;
     }
 
 }

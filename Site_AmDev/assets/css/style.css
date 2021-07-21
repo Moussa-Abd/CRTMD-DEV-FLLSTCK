@@ -393,9 +393,9 @@ section.contact .content .visitCard{
     left: 0;
     padding: 40px 40px;
     box-sizing: border-box;
-    background: rgb(14, 14, 14);
+    background: rgb(20, 20, 20);
     color: rgb(255, 255, 255);
-    border-top: rgb(20, 161, 255) 10px solid;
+    border-top: rgb(2, 146, 241) 7px solid;
     border-radius: 0 0 7px 7px;
 }
 .visitCard ul li{

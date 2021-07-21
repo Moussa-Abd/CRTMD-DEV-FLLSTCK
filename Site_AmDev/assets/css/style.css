@@ -512,6 +512,7 @@ section.second div.h1 h1::before{
     font-weight: 400;
     position: absolute;
     bottom: -3px;
+    margin-bottom: 10px;
 }
 .container#cn{
     position: relative;
@@ -630,9 +631,19 @@ section.second div.h1 h1::before{
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease-out;
 }
+#card-col .wrapper.end .button{
+    margin-left: 85px;
+    transform: scale(1.28);
+}
+#card-col .wrapper.end .button:hover{
+    transform: scale(2);
+}
 
 #card-col .wrapper .button {
     width: 200px;
+}
+#card-col .wrapper.end .button {
+    width: 60px;
 }
 #card-col .wrapper .button:hover {
     transform: scale(1.2)
@@ -673,28 +684,51 @@ section.second div.h1 h1::before{
     background: linear-gradient(90deg, rgb(248, 81, 3), rgb(255, 112, 46)) ;
     color: #bec2ce;
 }
+#card-col .wrapper.second .button:nth-child(1) .icon {
+    background: linear-gradient(90deg, #474A8A, #787CB5, #B0B3D6) ;
+    color: #bec2ce;
+}
 
 #card-col .wrapper .button:nth-child(2) .icon {
     background: linear-gradient(90deg, rgb(5, 100, 253), rgb(55, 140, 252) );
     color: #bec2ce;
+}
+#card-col .wrapper.second .button:nth-child(2) .icon{
+    background: linear-gradient(90deg, rgb(0, 0, 0), rgb(52, 53, 53) );
+    color: #bec2ce;  
 }
 
 #card-col .wrapper .button:nth-child(3) .icon {
     background: rgb(252, 228, 14);
     color: #000;
 }
+#card-col .wrapper.second .button:nth-child(3) .icon {
+    background:rgb(255, 255, 255);
+    color: #bec2ce;
+    border: rgba(0, 0, 0, 0.096) solid 1px;
+}
 
 #card-col .wrapper .button:nth-child(4) .icon {
     background: #6f00ff;
     color: #bec2ce;
 }
+#card-col .wrapper.second .button:nth-child(4) .icon {
+    background: linear-gradient(90deg, #dd1b16, #a6120d );
+    : #bec2ce;
+}
 
 #card-col .wrapper .button:nth-child(1) span {
     color: rgb(248, 81, 3);
 }
+#card-col .wrapper.second .button:nth-child(1) span {
+    color: #5458a1;
+}
 
 #card-col .wrapper .button:nth-child(2) span {
     color: rgb(5, 100, 253);
+}
+#card-col .wrapper.second .button:nth-child(2) span {
+    color: rgb(0, 0, 0);
 }
 
 #card-col .wrapper .button:nth-child(3) span {
@@ -709,6 +743,9 @@ section.second div.h1 h1::before{
 
 #card-col .wrapper .button:nth-child(4) span {
     color: #6f00ff;
+}
+#card-col .wrapper.second .button:nth-child(4) span {
+    color: #dd1b16;
 }
 
 /* Section timeline */
@@ -759,7 +796,7 @@ footer{
     bottom: 2px;
 }
 footer .footer-content p{
-    max-width: 500px;
+    max-width: 700px;
     margin: 10px auto;
     line-height: 28px;
     font-size: 14px;

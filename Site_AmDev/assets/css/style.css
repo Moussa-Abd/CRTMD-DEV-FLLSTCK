@@ -218,6 +218,7 @@ section.first a{
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.129);
     border-radius: 5px;
     padding: 10px;
+    margin-bottom: 10px;
     text-align: center;
     transition: .5s;
 }
@@ -237,6 +238,15 @@ section.timeline div h1{
     font-size: 30px;
     padding-top: 10px;
 }
+section.timeline div h1::before{
+    content: "";
+    background: rgb(151, 150, 150);
+    width: 300px;
+    height: 2px;
+    position: absolute;
+    bottom: -5px;
+}
+
 .timeline{
     position: relative;
 }
@@ -251,9 +261,10 @@ section.timeline div h1{
 	content: '';
 	position: absolute;
 	width: 2px;
-	height: 85%;
+	height: 605px;
 	background-color: #a0a0a0;
 	left: calc(50% - 1px);
+    margin-top: 35px;
 }
 .timeline-item{
 	margin-bottom: 40px;
@@ -284,7 +295,7 @@ section.timeline div h1{
 	border: 1px solid rgb(95, 95, 95);
     box-shadow: 0 5px 10px rgba(0, 0, 0,0.2);
 	position: absolute;
-	left: calc(50% - 8px);
+	left: calc(50% - 9px);
 	border-radius: 50%;
 	top:20px;
 }
@@ -339,14 +350,15 @@ section.contact h1{
     text-align: center;
     padding-top: 10px;
     color: rgb(102, 102, 102);
+    font-size: 30px;
 }
 section.contact h1::before{
     content: '';
     position: absolute;
-    width: 85px;
+    width: 110px;
     height: 2px;
     background: rgb(141, 141, 141);
-    top: 41px;
+    top: 47px;
 }
 section.contact .content{
     position: relative;
@@ -364,6 +376,7 @@ section.contact .content .visitCard{
     border-radius: 7px;
     box-shadow: 0 2px 12px rgba(175, 175, 175, 0.4);
     margin: 10px;
+    overflow: hidden;
     /* padding: 10px; */
 }
 .visitCard .logo{
@@ -396,17 +409,24 @@ section.contact .content .visitCard{
     background: rgb(20, 20, 20);
     color: rgb(255, 255, 255);
     border-top: rgb(2, 146, 241) 7px solid;
-    border-radius: 0 0 7px 7px;
+    /* border-radius: 0 0 7px 7px; */
 }
 .visitCard ul li{
     padding: 6px 0;
     font-size: 16px;
     text-transform: uppercase;
 }
+.visitCard ul li a{
+    color: #fff;
+}
+.visitCard ul li a:hover{
+    color: rgb(5, 155, 255);
+}
 .visitCard ul li span:nth-child(1) i{
     width: 20px;
     display: inline-block;
     font-size: 20px;
+    margin-right: 10px;
 }
 /* RESPONSIVE time line and First section */
 
@@ -451,11 +471,12 @@ section.contact .content .visitCard{
         justify-content: center;
         align-items: center;
         flex-wrap: wrap-reverse;
-        padding: 10px;
+        padding: 5px;
     }
     section.first img{
-        height: 200px;
-        width: 200px;
+        margin-top: 60px;
+        height: 100px;
+        width: 100px;
         float: none;
         object-fit: cover;
         border-radius: 50%;
@@ -465,8 +486,22 @@ section.contact .content .visitCard{
         position: relative;
         width: 100%;
         display: block;
-        margin: 10px;
+        margin: 5px;
+        padding: 0px;
+    }
+    section.first .content h1{
+        font-size: 1.277rem;
+    }
+    section.first .content h2{
+        font-size: 1.199rem;
         padding: 5px;
+    }
+    section.first .content p{
+        font-size: 1.02rem;
+        margin-top: 5px;
+    }
+    section.first .content a{
+        transform: translateY(-8px);
     }
 
 }
@@ -635,7 +670,9 @@ section.second div.h1 h1::before{
     margin-left: 85px;
     transform: scale(1.28);
 }
-#card-col .wrapper.end .button:hover{
+#card-col .wrapper.end .button:hover,
+#card-col .wrapper.end .button.ex img
+{
     transform: scale(2);
 }
 
@@ -653,6 +690,19 @@ section.second div.h1 h1::before{
     display: inline-block;
     height: 60px;
     width: 60px;
+    text-align: center;
+    border-radius: 50px;
+    box-sizing: border-box;
+    line-height: 60px;
+    transition: all 0.3s ease-out;
+}
+#card-col .wrapper.end .button .icon {
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     border-radius: 50px;
     box-sizing: border-box;
@@ -688,6 +738,9 @@ section.second div.h1 h1::before{
     background: linear-gradient(90deg, #474A8A, #787CB5, #B0B3D6) ;
     color: #bec2ce;
 }
+#card-col .wrapper.end .button:nth-child(1) .icon {
+    background: linear-gradient(90deg, #010c74, #000ed8) ;
+}
 
 #card-col .wrapper .button:nth-child(2) .icon {
     background: linear-gradient(90deg, rgb(5, 100, 253), rgb(55, 140, 252) );
@@ -697,6 +750,9 @@ section.second div.h1 h1::before{
     background: linear-gradient(90deg, rgb(0, 0, 0), rgb(52, 53, 53) );
     color: #bec2ce;  
 }
+#card-col .wrapper.end .button:nth-child(2) .icon{
+    background: linear-gradient(90deg, rgb(82, 37, 1), rgb(121, 59, 1) ); 
+}
 
 #card-col .wrapper .button:nth-child(3) .icon {
     background: rgb(252, 228, 14);
@@ -704,8 +760,11 @@ section.second div.h1 h1::before{
 }
 #card-col .wrapper.second .button:nth-child(3) .icon {
     background:rgb(255, 255, 255);
-    color: #bec2ce;
+    color: #7a7b7e;
     border: rgba(0, 0, 0, 0.096) solid 1px;
+}
+#card-col .wrapper.end .button:nth-child(3) .icon {
+    background:rgb(104, 1, 81);
 }
 
 #card-col .wrapper .button:nth-child(4) .icon {
@@ -714,7 +773,10 @@ section.second div.h1 h1::before{
 }
 #card-col .wrapper.second .button:nth-child(4) .icon {
     background: linear-gradient(90deg, #dd1b16, #a6120d );
-    : #bec2ce;
+    color: #bec2ce;
+}
+#card-col .wrapper.end .button:nth-child(4) .icon {
+    background: linear-gradient(90deg, #1494c7, #02b2df );
 }
 
 #card-col .wrapper .button:nth-child(1) span {
@@ -800,7 +862,7 @@ footer .footer-content p{
     margin: 10px auto;
     line-height: 28px;
     font-size: 14px;
-    color: rgb(201, 201, 201);
+    color: rgb(243, 243, 243);
 }
 .rs {
     display: flex;
@@ -860,6 +922,11 @@ div.icon-src{
     width: 100%;
     padding: 10px 0;
     text-align: center;
+}
+.footer-bottom p{
+    font-size: 12px;
+    padding: 5px;
+    color: #a0a0a0;
 }
 .footer-bottom span{
     text-transform: uppercase;
@@ -937,7 +1004,7 @@ a.arrowTop i.fas{
         display: flex;
         justify-content: center;
         font-weight: 500;
-        font-size: 48px;
+        font-size: 2rem;
         letter-spacing: 1.5px;
         transition: 0.5s color 0.4s;
         color: #ffff;
@@ -946,17 +1013,25 @@ a.arrowTop i.fas{
         display: block;
         margin: 0;
         transition: 0.5s;
-        padding: 24px 0;
+        padding: 5px 0;
     }
     ul li:last-child {
         margin-bottom: 0px;
     }
     header #nav-check:checked ~ nav{
         opacity: 1;
+        padding: 0;
         visibility: visible;
+        width: 100%;
         max-height: 100vh;
         background-color: rgba(41, 52, 63, 0.980);
         overflow-y: hidden;
+    }
+    header #nav-check:checked ~ nav .blur{
+        width: 100%;
+        height: 30vh;
+        opacity: 1;
+        background-color: rgba(41, 52, 63, 0.014);
     }
     header #nav-check:checked ~ label span{
         background: transparent;

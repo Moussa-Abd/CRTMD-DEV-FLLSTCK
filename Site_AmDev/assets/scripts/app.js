@@ -1,3 +1,12 @@
+// ScrollIndicator
+
+window.onscroll = () =>{
+
+    let maxHeight = window.document.body.scrollHeight - window.innerHeight;
+    let percentage = ((window.scrollY) / maxHeight) * 100;
+    window.document.getElementById("scroll-Indicator").style.width = percentage + "%";
+}
+
 // Nav scrollTop
 
 let lastScrollTop = 0;
@@ -5,9 +14,7 @@ header = document.querySelector(".header");
 window.addEventListener("scroll", function () {
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     if (scrollTop > lastScrollTop) {
-
 	    header.style.top = "-60px";
-        
     } else {
         header.style.top = 0;
     }
@@ -18,18 +25,15 @@ window.addEventListener("scroll", function () {
 //ArrowTop
 
 let topBtn = document.querySelector(".fa-chevron-up");
-window.onscroll = function () {
-    scrollFunction()
-};
 
-function scrollFunction() {
+window.addEventListener( "scroll",() => {
     if (document.body.scroll > 100 || document.documentElement.scrollTop > 100) {
         topBtn.style.display = "block";
         topBtn.style.transition = ".5s";
     } else {
         topBtn.style.display = "none";
     }
-}
+})
 
 // ModeDark
 

@@ -41,6 +41,15 @@ body{
     display: none;
 }
 
+#scroll-Indicator{
+    position: fixed;
+    height: 5px;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg, #4ff3ff, #4aaeff,#22c0ff);
+    z-index: 99;
+}
+
 /* Header and nav */
 
 .container{

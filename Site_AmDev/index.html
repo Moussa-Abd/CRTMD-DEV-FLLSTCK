@@ -9,7 +9,11 @@
       href="assets/images/logo-am.png"
       type="image/x-icon"
     />
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -19,9 +23,6 @@
     <title>AMdev</title>
   </head>
   <body>
-    <script>
-
-    </script>
     <div id="scroll-Indicator"></div>
     <header class="header" id="header">
       <div class="container" id="topBtn">
@@ -48,7 +49,9 @@
       </div>
     </header>
     <section class="first">
-      <div class="content">
+      <div class="content" data-aos="fade-down"
+      data-aos-easing="linear"
+      data-aos-duration="500">
         <h1>Hello ! je suis <span>Abdallah moussa</span></h1>
         <h2>Je suis un <span>Designer et Developpeur web</span></h2>
         <p>
@@ -57,17 +60,17 @@
           <strong>Développeur web et web mobile full stack</strong>. Je suis
           actuellement à la recherche d'un stage pour développeur web.
         </p>
-        <a href="docs/cv.pdf"><i class="fas fa-download"></i> Mon Cv</a>
+        <a href="docs/cv.pdf" data-aos="fade-down" data-aos-duration="2000"><i class="fas fa-download"></i> Mon Cv</a>
       </div>
       <br/>
-      <img src="assets/images/covers.jpg" alt="" />
+      <img src="assets/images/covers.jpg" alt="" data-aos="zoom-out-up" />
     </section>
     <section class="second" id="comp">
       <div class="h1">
         <h1>Compétences</h1>
       </div>
       <div class="container" id="cn">
-        <div class="" id="card-col">
+        <div class="" id="card-col" data-aos="zoom-out-right">
           <div class="wrapper">
             <div class="button">
               <div class="icon"><i class="fab fa-html5"></i></div>
@@ -88,7 +91,7 @@
           </div>
         </div>
 
-        <div class="" id="card-col">
+        <div class="" id="card-col" data-aos="zoom-out-down">
           <div class="wrapper second">
             <div class="button">
               <div class="icon"><i class="fab fa-php"></i></div>
@@ -109,7 +112,7 @@
           </div>
         </div>
 
-        <div class="" id="card-col">
+        <div class="" id="card-col" data-aos="zoom-out-left">
           <div class="wrapper end">
             <div class="button ex">
               <div class="icon"><img src="assets/images/Photoshop.svg" alt=""></div> 
@@ -170,11 +173,11 @@
         <h1>Etudes et Formations</h1>
       </div>
 
-      <div class="timeline-items">
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-date"><p>2020 - 2021</p></div>
-          <div class="timeline-content">
+      <div class="timeline-items" data-aos="zoom-in"></div>
+        <div class="timeline-item" >
+          <div class="timeline-dot" data-aos="zoom-in"></div>
+          <div class="timeline-date "data-aos="fade-right"><p>2020 - 2021</p></div>
+          <div class="timeline-content" data-aos="fade-right">
             <h3>Formation dev web et web mobile</h3>
             <p>
               ( Titre professionnel RNCP, diplôme BAC+2 ) <br>
@@ -183,9 +186,9 @@
           </div>
         </div>
         <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-date"><p>2018 - 2019</p></div>
-          <div class="timeline-content">
+          <div class="timeline-dot" data-aos="zoom-in"></div>
+          <div class="timeline-date" data-aos="fade-left"><p>2018 - 2019</p></div>
+          <div class="timeline-content" data-aos="fade-left">
             <h3>Formation de Designer web</h3>
             <p>
               ( Certificat Techniques d’intégration WEB ) <br> 
@@ -195,9 +198,9 @@
           </div>
         </div>
         <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-date"><p>2014 - 2018</p></div>
-          <div class="timeline-content">
+          <div class="timeline-dot" data-aos="zoom-in"></div>
+          <div class="timeline-date" data-aos="fade-right"><p>2014 - 2018</p></div>
+          <div class="timeline-content" data-aos="fade-right">
             <h3>Université - Licence A.E.S</h3>
             <p>
               (Administration economique et social) <br>
@@ -207,9 +210,9 @@
           </div>
         </div>
         <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-date"><p>2013 - 2014</p></div>
-          <div class="timeline-content">
+          <div class="timeline-dot" data-aos="zoom-in"></div>
+          <div class="timeline-date" data-aos="fade-left"><p>2013 - 2014</p></div>
+          <div class="timeline-content" data-aos="fade-left">
             <h3>Lycée- BAC STMG</h3>
             <p>
               Science technologique de management et de gestion
@@ -219,9 +222,10 @@
       </div>
     </section>
     <section class="contact" id="cont">
-      <h1>Contact</h1>
+      <h1>Contactez-moi</h1>
       <div class="content">
-        <div class="visitCard">
+        <div class="visitCard" data-aos="fade-up"
+        data-aos-anchor-placement="bottom-center " data-aos-delay="300">
            <div class="logo">
              <img src="assets/images/logo-am.png" alt="" />
              <h2> Moussa ABDALLAH</h2>
@@ -229,15 +233,15 @@
           <ul>
             <li>
               <span><i class="fas fa-phone-square-alt"></i></span>
-              <span> <a href="tel:+669964222">0669964222</a> </span>
+              <span> <a href="tel:+669964222"> 0669964222</a> </span>
             </li>
             <li>
               <span><i class="fas fa-envelope-square"></i></span>
-              <span><a href="mailto:abedi1@live.fr"> abedi@live.com</a></span>
+              <span><a href="mailto:abedi1@live.fr"> abedi1@live.fr</a></span>
             </li>
             <li>
               <span><i class="fas fa-map-marker-alt"></i></span>
-              <span><a href="https://www.google.fr/maps/@49.8906282,2.3166785,13.27z">Amiens, 80000</a> </span>
+              <span><a href="https://www.google.fr/maps/@49.8906282,2.3166785,13.27z"> Amiens, 80000</a> </span>
             </li>
           </ul>
         </div>
@@ -292,5 +296,8 @@
       </a>
     </div>
     <script src="assets/scripts/app.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

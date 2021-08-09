@@ -21,6 +21,7 @@ div.centre{
     display: flex;
     flex-direction: row;
     overflow: auto;
+scrollbar-width: none;
 }
 div.centre::-webkit-scrollbar{
     display: none;
@@ -31,7 +32,7 @@ div.box{
     min-width: 320px;
     height: 250px;
     background-image: linear-gradient(rgba(248, 248, 248, 0), 
-    rgba(0, 0, 0, 0.9)), url('/assets/images/pexels.jpg');
+    rgb(0, 0, 0, .99)75%), url('/assets/images/pexels.jpg');
     background-size: cover;
     box-shadow: 15px 10px 15px rgba(175, 175, 175, 0.1);
     margin: 5px;
@@ -42,31 +43,31 @@ div.box{
 }
 body div.box.box2{
     background-image: linear-gradient(rgba(248, 248, 248, 0), 
-    rgba(0, 0, 0, 0.9)),
+    rgba(0, 0, 0, 0.99)75%),
     url('/assets/images/pexels4.jpg');
     background-size: cover;
 }
 body div.box.box3{
     background-image: linear-gradient(rgba(248, 248, 248, 0), 
-    rgba(0, 0, 0, 0.9)),
+    rgba(0, 0, 0, 0.9)75%),
     url('/assets/images/pexels3.jpg');
     background-size: cover;
 }
 body div.box.box4{
     background-image: linear-gradient(rgba(248, 248, 248, 0), 
-    rgba(0, 0, 0, 0.9)),
+    rgba(0, 0, 0, 0.99)75%),
     url('/assets/images/pexels2.jpg');
     background-size: cover;
 }
 body div.box.box5{
     background-image: linear-gradient(rgba(248, 248, 248, 0), 
-    rgba(0, 0, 0, 0.9)),
+    rgba(0, 0, 0, 0.99)75%),
     url('/assets/images/pexels6.jpg');
     background-size: cover;
 }
 body div.box.box6{
     background-image: linear-gradient(rgba(248, 248, 248, 0), 
-    rgba(0, 0, 0, 0.9)),
+    rgba(0, 0, 0, 0.99)75%),
     url('/assets/images/pexels5.jpg');
     background-size: cover;
 }
@@ -93,4 +94,7 @@ div.box ul li{
     text-align: center;
     color: rgb(0, 20, 26);
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

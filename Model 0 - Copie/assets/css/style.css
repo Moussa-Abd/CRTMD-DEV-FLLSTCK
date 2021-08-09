@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'roboto',sans-serif;
+    background: linear-gradient(to right, rgba(68,180,255,1),rgba(244,197,247,1),rgba(145,214,255,1));
+}
+
+div.centre{
+    position: relative;
+    max-height: 300px;
+    background-color: rgba(247, 247, 247, 0.301);
+    border: 1px solid rgba(223, 222, 222, 0.178);
+    top: 300px;
+    box-shadow: 15px 10px 15px rgba(175, 175, 175, 0.5);
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
+}
+div.centre::-webkit-scrollbar{
+    display: none;
+}
+div.box{
+    color: #fff;
+    position: relative;
+    min-width: 320px;
+    height: 250px;
+    background-image: linear-gradient(rgba(248, 248, 248, 0), 
+    rgba(0, 0, 0, 0.9)), url('/assets/images/pexels.jpg');
+    background-size: cover;
+    box-shadow: 15px 10px 15px rgba(175, 175, 175, 0.1);
+    margin: 5px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+body div.box.box2{
+    background-image: linear-gradient(rgba(248, 248, 248, 0), 
+    rgba(0, 0, 0, 0.9)),
+    url('/assets/images/pexels4.jpg');
+    background-size: cover;
+}
+body div.box.box3{
+    background-image: linear-gradient(rgba(248, 248, 248, 0), 
+    rgba(0, 0, 0, 0.9)),
+    url('/assets/images/pexels3.jpg');
+    background-size: cover;
+}
+body div.box.box4{
+    background-image: linear-gradient(rgba(248, 248, 248, 0), 
+    rgba(0, 0, 0, 0.9)),
+    url('/assets/images/pexels2.jpg');
+    background-size: cover;
+}
+body div.box.box5{
+    background-image: linear-gradient(rgba(248, 248, 248, 0), 
+    rgba(0, 0, 0, 0.9)),
+    url('/assets/images/pexels6.jpg');
+    background-size: cover;
+}
+body div.box.box6{
+    background-image: linear-gradient(rgba(248, 248, 248, 0), 
+    rgba(0, 0, 0, 0.9)),
+    url('/assets/images/pexels5.jpg');
+    background-size: cover;
+}
+
+div.contain{
+    position: relative;
+    padding: 5px 10px;
+    max-height: 50%;
+    font-size: 15px;
+    bottom: 0;
+}
+div.contain h2{
+    text-align: center;
+}
+div.box ul{
+    display: flex;
+    justify-content: space-around;
+    margin: 5px 0;
+}
+div.box ul li{
+    background: rgb(236, 236, 236);
+    padding: 5px;
+    border-radius: 50%;
+    text-align: center;
+    color: rgb(0, 20, 26);
+    cursor: pointer;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="assets/images/cadenas.svg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <title>Systéme d'authentification</title>
+  </head>
+  <body>
+
+    <h1>Bienvenue, inscrivez-vous ou connectez-vous !</h1>
+    <br />
+
+    <div class="cont-btns">
+      <button class="btn-inscription ins">S'inscrire</button>
+      <button class="btn-connection ins">Se connecter</button>
+      <button class="btn-deco">Se déconnecter</button>
+      <span class="Etat"></span><em class="etat"></em>
+    </div>
+    <div class="contenu">
+      <h3 class="info">Contenu public.</h3>
+      <p> abedi@me.com </p>
+    </div>
+
+    <form class="form-inscription">
+      <h2>Inscription</h2>
+      <label for="emailInscription">Entrez un email</label>
+      <input type="email" class="email-inscription" id="emailInscription" />
+
+      <label for="mdpInscription">Entrez un mdp</label>
+      <input type="password" class="mdp-inscription" id="mdpInscription" />
+
+      <button type="submit">S'inscrire</button>
+    </form>
+
+    <form class="form-connection">
+      <h2>Connection</h2>
+      <label for="emailConnection">Entrez un email</label>
+      <input type="email" class="email-connection" id="emailConnection" />
+
+      <label for="mdpConnection">Entrez un mdp</label>
+      <input type="password" class="mdp-connection" id="mdpConnection" />
+
+      <button type="submit">Se connecter</button>
+    </form>
+
+
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyA4JIz8oj1P4oDEyufYNVLartVD1YpqOps",
+        authDomain: "authentification-js-8f6da.firebaseapp.com",
+        projectId: "authentification-js-8f6da",
+        storageBucket: "authentification-js-8f6da.appspot.com",
+        messagingSenderId: "150485165490",
+        appId: "1:150485165490:web:434a4827939666960c30ab",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+
+    </script>
+
+    <script src="app.js"></script>
+  </body>
+</html>

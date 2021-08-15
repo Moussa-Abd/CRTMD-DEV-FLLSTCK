@@ -22,12 +22,12 @@ div.centre{
     display: flex;
 
 }
-div.shadow{
+div.slidBox{
     display: flex;
     overflow: auto;
     scrollbar-width: none;
 }
-div.shadow::-webkit-scrollbar{
+div.slidBox::-webkit-scrollbar{
     display: none;
 }
 div.box{

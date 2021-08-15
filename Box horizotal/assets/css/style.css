@@ -20,11 +20,14 @@ div.centre{
     box-shadow: 0 5px 15px rgba(175, 175, 175, 0.5);
     backdrop-filter: blur(5px);
     display: flex;
-    flex-direction: row;
-    overflow: auto;
-scrollbar-width: none;
+
 }
-div.centre::-webkit-scrollbar{
+div.shadow{
+    display: flex;
+    overflow: auto;
+    scrollbar-width: none;
+}
+div.shadow::-webkit-scrollbar{
     display: none;
 }
 div.box{
@@ -41,6 +44,27 @@ div.box{
     display: flex;
     flex-direction: row;
     align-items: flex-end;
+}
+div.centre::before,
+div.centre::after{
+    content: "";
+    position: absolute;
+    border-radius: 0 20px 20px 0;
+    width: 100px;
+    height: 100%;
+    z-index: 2;
+    background: linear-gradient(to right, 
+    rgb(255, 255, 255), 
+    rgba(0, 0, 0, 0));
+}
+div.centre::before{
+    top: 0;
+    left: 0;
+}
+div.centre::after{
+    top: 0;
+    right: 0;
+    transform: rotate(180deg);
 }
 body div.box.box2{
     background-image: linear-gradient(rgba(248, 248, 248, 0), 

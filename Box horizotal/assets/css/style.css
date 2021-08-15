@@ -38,7 +38,7 @@ div.box{
     background-image: linear-gradient(rgba(248, 248, 248, 0), 
     rgb(0, 0, 0, .99)75%), url('/assets/images/pexels.jpg');
     background-size: cover;
-    box-shadow: 15px 10px 15px rgba(175, 175, 175, 0.1);
+    box-shadow: 15px 0px 15px rgba(175, 175, 175, 0.1);
     margin: 5px;
     border-radius: 10px;
     display: flex;
@@ -54,7 +54,7 @@ div.centre::after{
     height: 100%;
     z-index: 2;
     background: linear-gradient(to right, 
-    rgb(255, 255, 255), 
+    rgba(255, 255, 255, 0.986) 5%, 
     rgba(0, 0, 0, 0));
 }
 div.centre::before{

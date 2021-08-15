@@ -39,11 +39,15 @@ div.box{
     rgb(0, 0, 0, .99)75%), url('/assets/images/pexels.jpg');
     background-size: cover;
     box-shadow: 15px 0px 15px rgba(175, 175, 175, 0.1);
-    margin: 5px;
-    border-radius: 10px;
+    margin: 10px;
+    border-radius: 3px;
     display: flex;
     flex-direction: row;
     align-items: flex-end;
+    transition: .5s ease-in-out;
+}
+div.box:hover{
+    transform: scale(1.05)
 }
 div.centre::before,
 div.centre::after{

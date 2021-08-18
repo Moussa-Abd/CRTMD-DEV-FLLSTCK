@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1{
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+details{
+    position: relative;
+    padding: 5px 1rem;
+    margin: 5px;
+    background: rgb(206, 206, 206);
+    transition: 630ms ease;
+}
+
+
+details> summary {
+    position: relative;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+details> summary::-webkit-details-marker {
+    display: none;
+}
+details> summary::after{
+    content: '';
+    background-image: url('/assets/images/plus.svg');
+    background-repeat: no-repeat;
+    width: 1rem;
+    height: 1rem;
+    display: inline-flex;
+    transition: 0.1s ease-in-out;
+}
+details[open] > summary::after{
+    content: '';
+    background-image: url('/assets/images/moins.svg');
+    background-repeat: no-repeat;
+    transition: 0.1s ease;
+}
+details .details-content {
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+    margin-bottom: 4px;
+    background: rgb(170, 170, 170);
+    position: relative;
+    border-radius: 2px;
+}
+details .details-content::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 5px;
+    background: rgb(99, 124, 192);
+    top: 0%;
+    left: 0;
+}
+details .details-content > p{
+    margin: 1rem;
+}

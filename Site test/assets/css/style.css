@@ -26,9 +26,10 @@ nav{
     transition: all 0.3s ease-out;
 }
 .nav-anim{
-    background: rgba(250, 253, 255, 0.972);
+    background: rgba(250, 253, 255, 0.746);
     min-height: 40px;
     box-shadow: 0px 5px 10px rgba(49, 49, 49, 0.404);
+    backdrop-filter: blur(10px);
     top: -7px;
     z-index: 1;
     color: rgb(34, 34, 34);

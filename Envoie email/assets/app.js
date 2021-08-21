@@ -41,14 +41,6 @@ function emptyerror() {
     });
 }
 
-// function error() {
-//     Swal.fire({
-//         icon: "error",
-//         title: "Oops...",
-//         text: "Something went wrong!",
-//     });
-// }
-
 function success() {
     Swal.fire({
         icon: "success",

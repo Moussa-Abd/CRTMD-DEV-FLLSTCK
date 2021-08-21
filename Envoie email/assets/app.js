@@ -1,5 +1,6 @@
 
 function validate() {
+    
     let name = document.querySelector(".username");
     let email = document.querySelector(".email");
     let msg = document.querySelector(".message");
@@ -37,7 +38,7 @@ function emptyerror() {
     Swal.fire({
         icon: "error",
         title: "Oops...",
-        text: "Veuillez remplir tous les champs",
+        text: "Veuillez renseigner tous les champs !",
     });
 }
 

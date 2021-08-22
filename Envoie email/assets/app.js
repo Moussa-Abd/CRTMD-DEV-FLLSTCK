@@ -1,6 +1,6 @@
 
 function validate() {
-    
+
     let name = document.querySelector(".username");
     let email = document.querySelector(".email");
     let msg = document.querySelector(".message");
@@ -49,3 +49,47 @@ function success() {
         text: "Message envoyé avec succès",
     });
 }
+
+function validation(){
+
+    const email = document.querySelector("#email");
+    const icon = document.querySelector(".icon");
+
+    const pattern = /^[a-zA-Z][a-zA-Z0-9\-\_\.]+@[a-zA-Z0-9]{2,}\.[a-zA-Z0-9]{2,}$/;
+
+    icon.style.display = "inline-block";
+
+    if(email.value.match(pattern)){
+
+        icon.innerHTML = '<i class="fas fa-check-circle"></i>';
+        icon.style.color = '#2ecc71';
+
+    } else if(email.value == ""){
+
+        icon.style.display = "none";
+
+    } else {
+        icon.innerHTML = '<i class="fas fa-exclamation-circle"></i>';
+        icon.style.color = '#ff2851';
+    }
+
+}
+
+
+// const email = document.querySelector("#email");
+
+// email.addEventListener("click" , event => {
+//     event.preventDefault();
+
+//     // let input = document.querySelector('input[type="email"]');
+
+//     var emailReg = new RegExp(/^([w-.]+)@((?:[w]+.)+)([a-zA-Z]{2,4})/i);
+//     var valid = emailReg.test(email);
+
+//     if(!valid) {
+//         email.classList.add('invalid');
+//     } else {
+//         email.classList.add('valid');
+//     }
+    
+// }) 

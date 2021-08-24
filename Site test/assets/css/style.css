@@ -26,7 +26,7 @@ nav{
     transition: all 0.3s ease-out;
 }
 .nav-anim{
-    background: rgba(250, 253, 255, 0.746);
+    background: rgba(255, 255, 255, 0.746);
     min-height: 40px;
     box-shadow: 0px 5px 10px rgba(49, 49, 49, 0.404);
     backdrop-filter: blur(10px);
@@ -74,6 +74,150 @@ div.section .article{
     background-color: #fff;
     box-shadow: 2px 3px 10px rgba(27, 27, 27, 0.37);
 }
+
+/* side bar */
+
+section{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+section .nav-side{
+    position: absolute;
+    width: 70px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    border-right: 4px solid rgb(138, 136, 240);
+    background: rgba(227, 241, 250, 0.603);
+    box-shadow: 2px 0px 10px 0px rgba(32, 32, 32, 0.4);
+    transition: width .3s ease-out;
+    transition-delay: .01s;
+}
+
+section .nav-side ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 5px;
+    padding-top: 40px;
+}
+section .nav-side ul li {
+    position:  relative;
+    width: 100%;
+    transition: All .4s ease-in;
+}
+section  .nav-side ul li:hover{
+    background: #fff;
+    box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.157);
+    border-radius: 6px 0 0 6px;
+}
+section .nav-side ul li a {
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    color: black;
+}
+section .nav-side ul li a .icon{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 70px;
+    text-align: center;
+}
+
+section .nav-side ul li a .icon i{
+    position: relative;
+    font-size: 30px;
+    color: rgb(0, 162, 255);
+}
+section .nav-side ul li a .titre{
+    position: relative;
+    display: block;
+    padding-left: 10px;
+    height: 60px;
+    line-height: 60px;
+    white-space: nowrap;
+}
+
+section .nav-side:hover{
+    width: 250px;
+}
+section .nav-side:hover p{
+    display: inline-block;
+    /* opacity: 1; */
+    transition: display .5s ease-in-out;
+    transition-delay: 1.5s;
+}
+
+/* Main */
+
+section .main{
+    position: relative;
+    left: 0;
+    margin-left: 60px;
+    width: 100%;
+    height: 100vh;
+    background: rgb(241, 247, 252)
+
+}
+h2{
+    text-align: center;
+    padding: 10px;
+    width: 200px;
+    margin-bottom: 5px;
+    margin-left: 40%;
+    border-bottom: 3px solid rgb(88, 88, 88) ;
+}
+
+/* card  */
+
+div.main .container{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+div.main .container .card{
+    position: relative;
+    width: 250px;
+    margin-right: 10px;
+    height: 150px;
+    display: inline-block;
+    border-radius: 5px;
+    background: rgb(90, 174, 230);
+    /* z-index: 1; */
+}
+.card:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 249px;
+    height: 149px;
+    border: 1px solid rgba(138, 138, 138, 0.199);
+    background: rgba(0, 0, 0, 0);
+    border-radius: 5px;
+    transition: 0.2s ease-in;
+}
+.card:hover:after{
+    transform: rotate(2deg) scale(1.01);
+    width: 250px;
+    height: 150px;
+    border: 1px solid rgb(138, 138, 138);
+}
+
+
 footer {
     position: relative;
     bottom: 0;
@@ -87,4 +231,8 @@ footer .containt{
     text-align: center;
     color: rgb(233, 231, 231);
     margin: 10px 0;
+}
+
+.cache{
+    display: none;
 }

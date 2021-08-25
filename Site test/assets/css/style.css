@@ -92,7 +92,8 @@ section .nav-side{
     top: 0;
     overflow: hidden;
     border-right: 4px solid rgb(138, 136, 240);
-    background: rgba(227, 241, 250, 0.603);
+    background: rgba(227, 241, 250, 0.746);
+    backdrop-filter: blur(10px);
     box-shadow: 2px 0px 10px 0px rgba(32, 32, 32, 0.4);
     transition: width .3s ease-out;
     transition-delay: .01s;
@@ -161,7 +162,7 @@ section .nav-side:hover p{
 section .main{
     position: relative;
     left: 0;
-    margin-left: 60px;
+    margin-left: 70px;
     width: 100%;
     height: 100vh;
     background: rgb(241, 247, 252)
@@ -181,7 +182,7 @@ h2{
 div.main .container{
     position: relative;
     width: 100%;
-    min-height: 100vh;
+    min-height: 50vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -215,6 +216,98 @@ div.main .container .card{
     width: 250px;
     height: 150px;
     border: 1px solid rgb(138, 138, 138);
+}
+
+/*  */
+
+div.ab{
+    position: relative;
+    width: 300px;
+    height: auto;
+    left: 35%;
+    border: 1px solid rgba(58, 58, 58, 0.26);
+}
+.ab details summary{
+    position: relative;
+    background: rgba(238, 238, 238, 0.561);
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+.ab details summary:after{
+    content: "";
+    position: absolute;
+    background: rgb(214, 214, 214);
+    background-image: url('/assets/images/développer.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    width: 25px;
+    height: 40%;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+}
+summary p {
+    margin-left: 10px;
+    font-weight: 500;
+    font-size: 20px;
+}
+details{
+    transition: .5s ease;
+}
+summary + div{
+    position: relative;
+    background: #fff;
+    padding: 5px;
+    border-radius: 3px;
+}
+.div ul{
+    position: relative;
+    padding: 0;
+}
+.div li{
+    display: block;
+    flex-direction: column;
+    display: flex;
+    margin: 0;
+}
+.div li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    color: black;
+}
+.div li span{
+    position: relative;
+    display: block;
+    margin: 5px;
+    line-height: 40px;
+}
+.div li span.icon{
+    border-radius: 50%;
+    background: rgba(192, 192, 192, 0.274);
+
+}
+.div li span.icon i{
+    position: relative;
+    font-size: 20px;
+    color: rgb(0, 162, 255);
+    padding: 10px;
+}
+.div li span.icon .titre{
+    position: relative;
+    display: block;
+    padding-left: 10px;
+    height: 60px;
+}
+img{
+    position: relative;
+    border-radius: 50%;
+    object-fit: cover;
+    height: 50px;
+    width: 50px;
 }
 
 

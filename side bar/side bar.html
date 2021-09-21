@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: cursive;
+    }
+
+    body {
+        min-height: 100%;
+        background: #242932;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-bar-body {
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100%;
+    }
+
+    ul {
+        background: #000000b5;
+        padding: 4rem 0px 10px 10px;
+        width: 4.5rem;
+        height: 100%;
+        transition: 0.5s;
+        overflow: hidden;
+    }
+
+    ul li {
+        list-style: none;
+        padding: 15px;
+        padding-right: 0;
+        color: white;
+        font-size: 15px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        position: relative;
+        transition: 0.5s;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    ul li:hover {
+        transition: 0s;
+        background: #2429327a;
+    }
+
+    ul li.active::before {
+        content: '';
+        position: absolute;
+        top: -20px;
+        right: 0;
+        width: 20px;
+        height: 20px;
+        background: transparent;
+        border-radius: 50%;
+        box-shadow: 10px 10px 0px #242932;
+    }
+
+    ul li.active::after {
+        content: '';
+        position: absolute;
+        bottom: -20px;
+        right: 0;
+        width: 20px;
+        height: 20px;
+        background: transparent;
+        border-radius: 50%;
+        box-shadow: 10px -10px 0px #242932;
+    }
+
+    ul li.active {
+        background: #242932;
+    }
+
+    ul p {
+        position: absolute;
+        top: 16px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        color: white;
+        font-family: cursive;
+    }
+    ul:hover{
+        width: 11rem;
+    }
+    ul li img{
+        width: 2rem;
+        margin-right: 21px;
+    }
+</style>
+
+<body>
+    <div class="nav-bar-body">
+        <ul>
+            <p>Nav Bar</p>
+            <li class="active"><img src="./Categories.png" alt="">Home</li>
+            <li><img src="./Live Score.png" alt="">Live</li>
+            <li><img src="./Scores.png" alt="">Scores</li>
+            <li><img src="./Settings.png" alt="">Settings</li>
+            <li><img src="./Notification.png" alt="">Notification</li>
+            <li><img src="./Search.png" alt="">Search</li>
+            <li><img src="./Account.png" alt="">Account</li>
+        </ul>
+    </div>
+
+<script>
+    let items = document.querySelectorAll('li');
+
+    items.forEach(item => {
+        item.addEventListener('click', () => {
+            items.forEach(item => item.classList.remove('active'))
+            item.classList.add('active')
+        })
+    });
+</script>
+
+</body>
+</html> 
+
+                             

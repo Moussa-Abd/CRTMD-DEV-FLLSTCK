@@ -26,11 +26,24 @@
         </div>
         <a href="" class="close" onclick="popupToggle();">X</a>
     </div>
+
     <script>
         function popupToggle() {
             let popup = document.getElementById('popup');
             popup.classList.toggle('active')
         }
+    </script>
+    <script>
+        const open = document.getElementById('open');
+        const modal = document.getElementById('modal');
+        const close = document.querySelectorAll('.fermer');
+
+        open.addEventListener('click',() => {
+            modal.classList.add('afficher');
+        })
+        open.addEventListener('click',() => {
+            modal.classList.remove('afficher');
+        })
     </script>
 
     <script src="/assets/app.js"></script>
